@@ -11,6 +11,7 @@ import Experience from './components/Experience';
 import Traits from './components/Traits';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import DevModeOverlay from './components/ui/DevModeOverlay';
 
 const GalaxyHero = React.lazy(() => import('./components/three/r3f/GalaxyHero'));
 
@@ -28,6 +29,7 @@ const AppContent = () => {
   return (
     <div className="app-main" style={{ position: 'relative', zIndex: 1 }}>
       <HUD />
+      <DevModeOverlay />
 
       {!isLiteMode && (
         <Suspense fallback={null}>

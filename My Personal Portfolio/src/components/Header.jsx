@@ -3,11 +3,17 @@ import { Home, User, FolderGit2, Code, BookOpen, Mail, Briefcase } from 'lucide-
 
 const Header = () => {
     const [scrolled, setScrolled] = useState(false);
+    const [scrollDepth, setScrollDepth] = useState(0);
     const [activeSection, setActiveSection] = useState('home');
 
     useEffect(() => {
         const handleScroll = () => {
-            setScrolled(window.scrollY > 50);
+            const currentScroll = window.scrollY;
+            setScrolled(currentScroll > 50);
+
+            // Calculate a normalized scroll depth from 0 to 1 over the first 500px of scroll
+            const depth = Math.min(currentScroll / 500, 1);
+            setScrollDepth(depth);
 
             // Determine active section
             const sections = ['home', 'about', 'skills', 'services', 'experience', 'projects', 'contact'];
@@ -57,7 +63,16 @@ const Header = () => {
     return (
         <header className={`header ${scrolled ? 'scrolled' : ''}`}>
             <div className="container header-container">
-                <nav className="nav-dock" ref={navRef}>
+                <nav
+                    className="nav-dock"
+                    ref={navRef}
+                    style={{
+                        backgroundColor: `rgba(15, 15, 20, ${0.4 + (scrollDepth * 0.4)})`,
+                        backdropFilter: `blur(${10 + (scrollDepth * 20)}px)`,
+                        WebkitBackdropFilter: `blur(${10 + (scrollDepth * 20)}px)`,
+                        border: `1px solid rgba(255, 255, 255, ${0.05 + (scrollDepth * 0.05)})`
+                    }}
+                >
                     <div className="nav-lamp" style={{ left: lampStyle.left, opacity: lampStyle.opacity }}></div>
                     {navItemsFinal.map((item) => (
                         <a

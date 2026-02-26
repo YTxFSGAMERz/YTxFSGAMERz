@@ -5,6 +5,9 @@ const TiltCard = ({ children, className = '' }) => {
     const [transform, setTransform] = useState('perspective(1000px) rotateX(0deg) rotateY(0deg)');
     const [isHovered, setIsHovered] = useState(false);
 
+    // For calculating the dynamic rim light/glare position
+    const [glarePos, setGlarePos] = useState({ x: 50, y: 50 });
+
     const handleMouseMove = (e) => {
         if (!cardRef.current) return;
 
@@ -19,6 +22,12 @@ const TiltCard = ({ children, className = '' }) => {
         const rotateY = ((x - centerX) / centerX) * 5;
 
         setTransform(`perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`);
+
+        // Update glare position (percentage)
+        setGlarePos({
+            x: (x / width) * 100,
+            y: (y / height) * 100
+        });
     };
 
     const handleMouseEnter = () => {
@@ -44,6 +53,34 @@ const TiltCard = ({ children, className = '' }) => {
                 position: 'relative' // Ensure children layer correctly
             }}
         >
+            {/* Dynamic CSS rim light/glare that follows the cursor */}
+            <div
+                style={{
+                    position: 'absolute',
+                    top: 0, left: 0, right: 0, bottom: 0,
+                    zIndex: 10,
+                    pointerEvents: 'none',
+                    background: isHovered
+                        ? `radial-gradient(circle at ${glarePos.x}% ${glarePos.y}%, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 60%)`
+                        : 'transparent',
+                    opacity: isHovered ? 1 : 0,
+                    transition: 'opacity 0.3s ease',
+                    mixBlendMode: 'overlay',
+                }}
+            />
+            {/* Extremely subtle rim light border overlay */}
+            <div
+                style={{
+                    position: 'absolute',
+                    top: 0, left: 0, right: 0, bottom: 0,
+                    zIndex: 9,
+                    pointerEvents: 'none',
+                    borderRadius: 'inherit',
+                    boxShadow: isHovered ? `inset 0 0 0 1px rgba(255,255,255,0.2)` : 'inset 0 0 0 1px rgba(255,255,255,0.05)',
+                    transition: 'box-shadow 0.3s ease'
+                }}
+            />
+
             {typeof children === 'function' ? children(isHovered) : children}
         </div>
     );
