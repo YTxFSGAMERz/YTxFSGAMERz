@@ -1,8 +1,59 @@
 import React from 'react';
 import useScrollAnimation from '../hooks/useScrollAnimation';
+import { supabase } from '../lib/supabase';
 
 const Contact = () => {
     const sectionRef = useScrollAnimation();
+
+    const [formData, setFormData] = React.useState({ name: '', email: '', message: '' });
+    const [isSubmitting, setIsSubmitting] = React.useState(false);
+    const [isSuccess, setIsSuccess] = React.useState(false);
+    const [errorMsg, setErrorMsg] = React.useState('');
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        // Basic validation
+        if (!formData.name || !formData.email || !formData.message) {
+            setErrorMsg('Please fill out all fields.');
+            return;
+        }
+
+        setIsSubmitting(true);
+        setErrorMsg('');
+
+        try {
+            const { error } = await supabase
+                .from('contact_messages')
+                .insert([
+                    {
+                        name: formData.name,
+                        email: formData.email,
+                        message: formData.message
+                    }
+                ]);
+
+            if (error) throw error;
+
+            setIsSuccess(true);
+            setFormData({ name: '', email: '', message: '' }); // Clear form
+
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                setIsSuccess(false);
+            }, 5000);
+
+        } catch (error) {
+            setErrorMsg(error.message || 'An error occurred while sending your message.');
+            console.error('Error submitting contact form:', error);
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
 
     return (
         <section ref={sectionRef} id="contact" className="section-padding fade-up">
@@ -33,13 +84,69 @@ const Contact = () => {
                         </div>
                     </div>
                     <div className="contact-form-placeholder">
-                        {/* Visual representation of a "connected" state or a simple form */}
-                        <form onSubmit={(e) => e.preventDefault()} className="simple-form">
-                            <input type="text" id="name" name="name" autoComplete="name" placeholder="Name" className="form-input" />
-                            <input type="email" id="email" name="email" autoComplete="email" placeholder="Email" className="form-input" />
-                            <textarea id="message" name="message" placeholder="Message" className="form-textarea"></textarea>
-                            <button className="btn-primary" style={{ width: '100%' }}>Send Message</button>
-                        </form>
+                        {isSuccess ? (
+                            <div className="success-message" style={{ textAlign: 'center', padding: '2rem' }}>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ color: '#4ade80', marginBottom: '1rem', margin: '0 auto' }}>
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                </svg>
+                                <h3>Message Sent!</h3>
+                                <p style={{ color: 'var(--text-secondary)', marginTop: '0.5rem' }}>
+                                    Thank you for reaching out. I'll get back to you as soon as possible.
+                                </p>
+                            </div>
+                        ) : (
+                            <form onSubmit={handleSubmit} className="simple-form">
+                                {errorMsg && (
+                                    <div className="error-message" style={{ color: '#ef4444', backgroundColor: 'rgba(239, 68, 68, 0.1)', padding: '0.75rem', borderRadius: '0.5rem', marginBottom: '1rem', fontSize: '0.875rem' }}>
+                                        {errorMsg}
+                                    </div>
+                                )}
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    value={formData.name}
+                                    onChange={handleChange}
+                                    autoComplete="name"
+                                    placeholder="Name"
+                                    className="form-input"
+                                    disabled={isSubmitting}
+                                    required
+                                />
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleChange}
+                                    autoComplete="email"
+                                    placeholder="Email"
+                                    className="form-input"
+                                    disabled={isSubmitting}
+                                    required
+                                />
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    value={formData.message}
+                                    onChange={handleChange}
+                                    placeholder="Message"
+                                    className="form-textarea"
+                                    disabled={isSubmitting}
+                                    required
+                                    style={{ minHeight: '150px' }}
+                                ></textarea>
+                                <button
+                                    type="submit"
+                                    className="btn-primary"
+                                    style={{ width: '100%', opacity: isSubmitting ? 0.7 : 1, cursor: isSubmitting ? 'not-allowed' : 'pointer' }}
+                                    disabled={isSubmitting}
+                                >
+                                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                                </button>
+                            </form>
+                        )}
                     </div>
                 </div>
             </div>
