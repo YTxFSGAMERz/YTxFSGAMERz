@@ -17,7 +17,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
 
           # Options
-          user: Farhans123456
+          user: YTxFSGAMERz
           template: classic
           base: header, activity, community, repositories, metadata
           config_timezone: Asia/Kolkata
