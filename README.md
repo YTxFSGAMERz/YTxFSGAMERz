@@ -18,20 +18,13 @@
 
 ---
 
-## 🏆 GitHub Trophies *(Hover over them!)*
-<p align="center">
-  <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=YTxFSGAMERz&theme=radical&margin-w=15&margin-h=15&column=7&no-bg=true" alt="GitHub Trophies" />
-  </a>
-</p>
+## 📊 GitHub Metrics & Activity
 
-## 📊 Interactive Stats *(Clickable & Hoverable)*
-<div align="center">
-  <a href="https://github.com/YTxFSGAMERz">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=YTxFSGAMERz&show_icons=true&theme=radical&include_all_commits=true&count_private=true"/>
-  <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=YTxFSGAMERz&layout=compact&theme=radical"/>
-  </a>
-</div>
+> **Note:** The image below is dynamically generated using [lowlighter/metrics](https://github.com/lowlighter/metrics) via GitHub Actions!
+> *It will appear as a broken image until the Action runs successfully for the first time.*
+<p align="center">
+  <img src="github-metrics.svg" alt="GitHub Metrics Image (Waiting for GitHub Actions...)" />
+</p>
 
 <br>
 
@@ -103,7 +96,7 @@
 ---
 
 <p align="center">
-  <a href="https://visitcount.itsvg.in">
-    <img src="https://visitcount.itsvg.in/api?id=YTxFSGAMERz&icon=4&color=0" alt="Visitor Badge"/>
+  <a href="https://komarev.com/ghpvc/?username=YTxFSGAMERz">
+    <img src="https://komarev.com/ghpvc/?username=YTxFSGAMERz&style=flat-square&color=blue" alt="Visitor Badge"/>
   </a>
 </p>
