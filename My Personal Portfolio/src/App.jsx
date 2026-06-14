@@ -14,7 +14,7 @@ import Footer from './components/Footer';
 import DevModeOverlay from './components/ui/DevModeOverlay';
 import BookingForm from './components/BookingForm';
 
-const GalaxyHero = React.lazy(() => import('./components/three/r3f/GalaxyHero'));
+const CustomBackground = React.lazy(() => import('./components/CustomBackground'));
 
 const AppContent = () => {
   const { activeSection, setActiveSection, isLiteMode } = usePortfolio();
@@ -35,7 +35,7 @@ const AppContent = () => {
 
       {!isLiteMode && (
         <Suspense fallback={null}>
-          <GalaxyHero activeSection={activeSection} onNavigate={handleNavigate} />
+          <CustomBackground activeSection={activeSection} onNavigate={handleNavigate} />
         </Suspense>
       )}
 
