@@ -3,6 +3,7 @@ import { EmojiProvider } from 'react-apple-emojis';
 import emojiData from 'react-apple-emojis/src/data.json';
 import { PortfolioProvider, usePortfolio } from './context/PortfolioContext';
 import HUD from './components/ui/HUD';
+import GlassNavbar from './components/ui/glass-navbar';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -31,7 +32,7 @@ const AppContent = () => {
 
   return (
     <div className="app-main" style={{ position: 'relative', zIndex: 1 }}>
-      <HUD />
+      <GlassNavbar />
       <DevModeOverlay />
       <BookingForm />
 
