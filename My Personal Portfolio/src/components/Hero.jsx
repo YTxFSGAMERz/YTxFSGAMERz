@@ -1,5 +1,6 @@
 import React from 'react';
 import useScrollAnimation from '../hooks/useScrollAnimation';
+import AppleEmoji from './AppleEmoji';
 
 const Hero = () => {
     const sectionRef = useScrollAnimation();
@@ -30,7 +31,7 @@ const Hero = () => {
                         <div className="portrait-glow"></div>
                         {/* Replace src with actual image later */}
                         <div className="portrait-circle">
-                            <span style={{ fontSize: '3rem' }}>👨‍💻</span>
+                            <AppleEmoji char="👨‍💻" width={48} />
                         </div>
                     </div>
                 </div>
