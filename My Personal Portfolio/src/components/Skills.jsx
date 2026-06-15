@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import useScrollAnimation from '../hooks/useScrollAnimation';
+import AppleEmoji from './AppleEmoji';
 
 const skills = [
-    { id: 'sec', name: "Cybersecurity", icon: "🛡️", x: 20, y: 30, color: "#ff3366", details: "Conducting vulnerability assessments, penetration testing, and designing secure network protocols to protect critical infrastructure." },
-    { id: 'ai', name: "AI & ML", icon: "🤖", x: 75, y: 25, color: "#00f3ff", details: "Experimenting with neural networks, natural language processing, and predictive analytics to solve complex problems and build generative models." },
-    { id: 'math', name: "Mathematics", icon: "📐", x: 45, y: 15, color: "#a200ff", details: "Applying advanced mathematical concepts including linear algebra, calculus, and probability theory to optimize algorithms and data structures." },
-    { id: 'prog', name: "Programming", icon: "💻", x: 50, y: 80, color: "#10b981", details: "Writing clean, scalable, and efficient code across multiple languages and paradigms to build robust full-stack applications and systems." },
-    { id: 'vid', name: "Video Editing", icon: "🎬", x: 25, y: 70, color: "#f59e0b", details: "Crafting compelling visual narratives through advanced video editing, motion graphics, and post-production techniques." },
-    { id: 'tech', name: "Emerging Tech", icon: "🚀", x: 80, y: 65, color: "#8b5cf6", details: "Exploring and integrating cutting-edge technologies like WebGL, Three.js, and decentralized systems to push the boundaries of modern web experiences." }
+    { id: 'sec', name: "Cybersecurity", icon: <AppleEmoji char="🛡️" />, x: 20, y: 30, color: "#ff3366", details: "Conducting vulnerability assessments, penetration testing, and designing secure network protocols to protect critical infrastructure." },
+    { id: 'ai', name: "AI & ML", icon: <AppleEmoji char="🤖" />, x: 75, y: 25, color: "#00f3ff", details: "Experimenting with neural networks, natural language processing, and predictive analytics to solve complex problems and build generative models." },
+    { id: 'math', name: "Mathematics", icon: <AppleEmoji char="📐" />, x: 45, y: 15, color: "#a200ff", details: "Applying advanced mathematical concepts including linear algebra, calculus, and probability theory to optimize algorithms and data structures." },
+    { id: 'prog', name: "Programming", icon: <AppleEmoji char="💻" />, x: 50, y: 80, color: "#10b981", details: "Writing clean, scalable, and efficient code across multiple languages and paradigms to build robust full-stack applications and systems." },
+    { id: 'vid', name: "Video Editing", icon: <AppleEmoji char="🎬" />, x: 25, y: 70, color: "#f59e0b", details: "Crafting compelling visual narratives through advanced video editing, motion graphics, and post-production techniques." },
+    { id: 'tech', name: "Emerging Tech", icon: <AppleEmoji char="🚀" />, x: 80, y: 65, color: "#8b5cf6", details: "Exploring and integrating cutting-edge technologies like WebGL, Three.js, and decentralized systems to push the boundaries of modern web experiences." }
 ];
 
 const connections = [
