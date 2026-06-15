@@ -13,12 +13,15 @@
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.5.0",
     "@supabase/supabase-js": "^2.98.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
     "gsap": "^3.14.2",
     "lucide-react": "^0.564.0",
     "playwright": "^1.58.2",
     "react": "^19.2.0",
     "react-apple-emojis": "^3.0.0",
     "react-dom": "^19.2.0",
+    "tailwind-merge": "^3.6.0",
     "three": "^0.183.1"
   },
   "devDependencies": {
@@ -26,10 +29,13 @@
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.1",
+    "autoprefixer": "^10.5.0",
     "eslint": "^9.39.1",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
+    "postcss": "^8.5.15",
+    "tailwindcss": "^4.3.1",
     "vite": "^7.3.1"
   }
 }
