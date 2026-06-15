@@ -38,14 +38,6 @@ const HUD = () => {
             {/* Top Right Controls */}
             <div className="hud-controls glass-panel">
                 <button
-                    className={`icon-btn ${isLiteMode ? 'active-lite' : ''}`}
-                    onClick={toggleLiteMode}
-                    title={isLiteMode ? "Enable 3D Features" : "Enable Lite Mode (2D)"}
-                    aria-label="Toggle 3D rendering modes"
-                >
-                    {isLiteMode ? <ZapOff size={18} /> : <Zap size={18} />}
-                </button>
-                <button
                     className="icon-btn mobile-menu-toggle"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                 >
