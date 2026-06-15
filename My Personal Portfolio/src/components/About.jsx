@@ -2,6 +2,7 @@ import React from 'react';
 import useScrollAnimation from '../hooks/useScrollAnimation';
 import { ChevronRight, Github, Linkedin, Mail, Code, Cpu, Globe, Zap } from 'lucide-react';
 import AppleEmoji from './AppleEmoji';
+import ElectricProfileCard from './ui/ElectricProfileCard';
 
 const About = () => {
     const sectionRef = useScrollAnimation();
@@ -61,7 +62,7 @@ const About = () => {
 
                     {/* Right Column: Visuals */}
                     <div className="about-visuals">
-                        <div className="profile-card glass-card">
+                        <ElectricProfileCard className="profile-card">
                             <div className="profile-image-container">
                                 {/* Placeholder Gradient Art */}
                                 <div className="profile-placeholder-art"></div>
@@ -72,7 +73,7 @@ const About = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </ElectricProfileCard>
 
                         <div className="stats-row">
                             {stats.map((stat, index) => (
