@@ -1,27 +1,28 @@
 import React from 'react';
 import TiltCard from './TiltCard';
 import useScrollAnimation from '../hooks/useScrollAnimation';
+import AppleEmoji from './AppleEmoji';
 
 const services = [
     {
         title: "Cybersecurity Architecture",
         description: "Fortifying digital ecosystems through Zero Trust frameworks, offensive defense strategies, and advanced vulnerability assessments.",
-        icon: "🛡️"
+        icon: <AppleEmoji char="🛡️" width={32} />
     },
     {
         title: "AI & Neural Networks",
         description: "Architecting autonomous intelligent systems and predictive models that transform raw data into decisive strategic advantages.",
-        icon: "🧠"
+        icon: <AppleEmoji char="🧠" width={32} />
     },
     {
         title: "High-Performance Engineering",
         description: "Building scalable, fault-tolerant full-stack applications designed for speed, reliability, and massive user loads.",
-        icon: "⚡"
+        icon: <AppleEmoji char="⚡" width={32} />
     },
     {
         title: "Next-Gen Prototyping",
         description: "Rapidly translating theoretical concepts into bleeding-edge, deployable technologies that define the future market.",
-        icon: "🚀"
+        icon: <AppleEmoji char="🚀" width={32} />
     }
 ];
 
