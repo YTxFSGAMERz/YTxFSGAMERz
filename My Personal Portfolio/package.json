@@ -17,6 +17,7 @@
     "lucide-react": "^0.564.0",
     "playwright": "^1.58.2",
     "react": "^19.2.0",
+    "react-apple-emojis": "^3.0.0",
     "react-dom": "^19.2.0",
     "three": "^0.183.1"
   },
