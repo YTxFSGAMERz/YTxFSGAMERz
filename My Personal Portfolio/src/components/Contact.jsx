@@ -1,6 +1,7 @@
 import React from 'react';
 import useScrollAnimation from '../hooks/useScrollAnimation';
 import { supabase } from '../lib/supabase';
+import AppleEmoji from './AppleEmoji';
 
 const Contact = () => {
     const sectionRef = useScrollAnimation();
@@ -67,7 +68,7 @@ const Contact = () => {
                         </p>
                         <div className="contact-links">
                             <a href="mailto:f98561965@gmail.com" className="contact-link">
-                                <span style={{ fontSize: '1.2rem' }}>📧</span> f98561965@gmail.com
+                                <AppleEmoji char="📧" width={24} className="mr-2" /> f98561965@gmail.com
                             </a>
                             <a href="https://www.linkedin.com/in/farhan-shaikh-753551358/" target="_blank" rel="noopener noreferrer" className="contact-link">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style={{ color: '#0077b5' }}>
