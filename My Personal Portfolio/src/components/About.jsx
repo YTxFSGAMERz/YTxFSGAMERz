@@ -1,6 +1,7 @@
 import React from 'react';
 import useScrollAnimation from '../hooks/useScrollAnimation';
 import { ChevronRight, Github, Linkedin, Mail, Code, Cpu, Globe, Zap } from 'lucide-react';
+import AppleEmoji from './AppleEmoji';
 
 const About = () => {
     const sectionRef = useScrollAnimation();
@@ -29,7 +30,7 @@ const About = () => {
                             I’m Farhan, a Computer Science Engineering student passionate about <span className="text-highlight">Cybersecurity</span>, <span className="text-highlight">AI</span>, and <span className="text-highlight">Machine Learning</span>. I work with Linux, SQL, and automation, building practical AI-based projects.
                         </p>
                         <p className="about-description">
-                            Alongside programming, I create digital content and edit videos, simplifying complex concepts—especially mathematics. I’m focused on continuous learning and combining technical depth with creativity. 🚀
+                            Alongside programming, I create digital content and edit videos, simplifying complex concepts—especially mathematics. I’m focused on continuous learning and combining technical depth with creativity. <AppleEmoji char="🚀" width={24} className="inline ml-1" />
                         </p>
 
                         <div className="about-tags-section">
