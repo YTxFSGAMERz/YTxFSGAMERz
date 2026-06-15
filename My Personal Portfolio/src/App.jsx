@@ -1,4 +1,6 @@
 import React, { Suspense } from 'react';
+import { EmojiProvider } from 'react-apple-emojis';
+import emojiData from 'react-apple-emojis/src/data.json';
 import { PortfolioProvider, usePortfolio } from './context/PortfolioContext';
 import HUD from './components/ui/HUD';
 import Header from './components/Header';
@@ -60,7 +62,9 @@ const AppContent = () => {
 function App() {
   return (
     <PortfolioProvider>
-      <AppContent />
+      <EmojiProvider data={emojiData}>
+        <AppContent />
+      </EmojiProvider>
     </PortfolioProvider>
   );
 }
