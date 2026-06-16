@@ -30,9 +30,11 @@
   --text-accent: #e2e8f0;
 
   /* Glassmorphism */
-  --glass-border: rgba(255, 255, 255, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
   --glass-highlight: rgba(255, 255, 255, 0.15);
-  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  --glass-inset-shine: inset 0 1px 1px 0 rgba(255, 255, 255, 0.15);
 
   /* Fonts */
   --font-main: 'Inter', sans-serif;
@@ -40,6 +42,54 @@
 
   /* Transitions */
   --ease-spring: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.light-theme {
+  /* Apple Light Palette over 3D Background */
+  --bg-dark: rgba(245, 245, 247, 0.4); 
+  --bg-secondary: rgba(255, 255, 255, 0.6); 
+  --bg-card: rgba(255, 255, 255, 0.5);
+
+  /* Apple Accents */
+  --primary-purple: #0071e3;
+  --primary-glow: #3392ff;
+  --accent-cyan: #1d1d1f;
+  --accent-pink: #0071e3;
+
+  /* Text */
+  --text-primary: #1d1d1f;
+  --text-secondary: #86868b;
+  --text-accent: #000000;
+
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.25);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --glass-highlight: rgba(255, 255, 255, 0.8);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+  --glass-inset-shine: inset 0 1px 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+.theme-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  background: radial-gradient(circle at 15% 50%, rgba(0, 113, 227, 0.08), transparent 30%),
+              radial-gradient(circle at 85% 30%, rgba(123, 44, 191, 0.08), transparent 30%),
+              rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.light-theme .theme-overlay {
+  opacity: 1;
+}
+
+.light-theme body {
+  background-image: none;
+  background-color: #f5f5f7;
 }
 
 * {
@@ -144,11 +194,11 @@ ul {
 
 .glass-card {
   background: var(--bg-card);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(40px) saturate(150%);
+  -webkit-backdrop-filter: blur(40px) saturate(150%);
   border: 1px solid var(--glass-border);
-  border-radius: 16px;
-  box-shadow: var(--glass-shadow);
+  border-radius: 32px;
+  box-shadow: var(--glass-shadow), var(--glass-inset-shine);
   transition: transform 0.3s var(--ease-spring), border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -634,12 +684,15 @@ ul {
 
 .skill-tag,
 .interest-tag {
-  background: rgba(2, 0, 16, 0.6);
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   padding: 0.5rem 1.2rem;
   border-radius: 50px;
   font-size: 0.9rem;
   color: var(--text-primary);
   border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
   transition: all 0.3s ease;
 }
 
@@ -671,7 +724,9 @@ ul {
   border: 1px solid var(--glass-border);
   color: var(--text-secondary);
   transition: all 0.3s ease;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .social-btn:hover {
@@ -757,21 +812,23 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgba(2, 0, 16, 0.4);
-  backdrop-filter: blur(10px);
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
   transition: all 0.3s ease;
 }
 
 .stat-card:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--glass-highlight);
   transform: translateY(-5px);
-  border-color: var(--glass-border);
+  border-color: var(--primary-purple);
 }
 
 .stat-header {
   margin-bottom: 0.5rem;
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--glass-highlight);
   padding: 8px;
   border-radius: 50%;
   display: flex;
@@ -782,7 +839,7 @@ ul {
 .stat-value {
   font-size: 1.25rem;
   font-weight: 700;
-  color: white;
+  color: var(--text-primary);
   margin-bottom: 0.2rem;
 }
 
@@ -868,7 +925,9 @@ ul {
 .service-icon {
   font-size: 3rem;
   margin-bottom: 1.5rem;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   width: 80px;
   height: 80px;
   display: flex;
@@ -1112,11 +1171,13 @@ ul {
 .form-textarea {
   width: 100%;
   padding: 1rem;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(128, 128, 128, 0.1);
+  backdrop-filter: blur(10px);
   border: 1px solid var(--glass-border);
   border-radius: 8px;
   color: var(--text-primary);
   font-family: var(--font-main);
+  transition: all 0.3s ease;
 }
 
 .form-textarea {
