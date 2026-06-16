@@ -18,6 +18,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import DevModeOverlay from './components/ui/DevModeOverlay';
 import BookingForm from './components/BookingForm';
+import GhostCursor from './components/ui/GhostCursor';
 
 const CustomBackground = React.lazy(() => import('./components/CustomBackground'));
 import AppleFluidBackground from './components/ui/AppleFluidBackground';
@@ -60,18 +61,28 @@ const AppContent = () => {
   };
 
   return (
-    <div className="app-main" style={{ position: 'relative', zIndex: 1 }}>
-      <GlassNavbar />
-      <DevModeOverlay />
-      <BookingForm />
-
-      {!isLiteMode && (
-        <Suspense fallback={null}>
-          <CustomBackground activeSection={activeSection} onNavigate={handleNavigate} />
-        </Suspense>
-      )}
-
+    <>
       <AppleFluidBackground />
+
+      <div style={{ position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh', pointerEvents: 'none', zIndex: -1 }}>
+        <GhostCursor
+          trailLength={65}
+          inertia={0.75}
+          grainIntensity={0.08}
+          bloomStrength={0.05}
+          bloomRadius={0.5}
+          brightness={0.6}
+          color="#7b2cbf"
+          edgeIntensity={0.1}
+          mixBlendMode="normal"
+          style={{ width: '100%', height: '100%' }}
+        />
+      </div>
+
+      <div className="app-main" style={{ position: 'relative', zIndex: 1 }}>
+        <GlassNavbar />
+        <DevModeOverlay />
+        <BookingForm />
 
       <main style={{ position: 'relative', zIndex: 10, pointerEvents: 'none' }}>
         {/* Pointer events none on main prevents blocking the 3D canvas globally.
@@ -88,6 +99,7 @@ const AppContent = () => {
 
       <Footer />
     </div>
+    </>
   );
 };
 
