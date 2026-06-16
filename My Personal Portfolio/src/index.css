@@ -16,7 +16,7 @@
   /* Deepest Midnight */
   --bg-secondary: #0F0524;
   /* Deep Purple Background */
-  --bg-card: rgba(255, 255, 255, 0.03);
+  --bg-card: rgba(255, 255, 255, 0.08);
 
   /* Neon Accents */
   --primary-purple: #7b2cbf;
@@ -30,11 +30,18 @@
   --text-accent: #e2e8f0;
 
   /* Glassmorphism */
-  --glass-bg: rgba(255, 255, 255, 0.05);
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-highlight: rgba(255, 255, 255, 0.15);
-  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-  --glass-inset-shine: inset 0 1px 1px 0 rgba(255, 255, 255, 0.15);
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --glass-highlight: rgba(255, 255, 255, 0.25);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  --glass-inset-shine: inset 0 1px 1px 0 rgba(255, 255, 255, 0.2), inset 0 -10px 20px rgba(255, 255, 255, 0.02);
+  --hover-shadow: rgba(157, 78, 221, 0.4);
+
+  /* Project Cards */
+  --project-card-1: linear-gradient(135deg, rgba(26, 26, 46, 0.4) 0%, rgba(22, 33, 62, 0.4) 100%);
+  --project-card-2: linear-gradient(135deg, rgba(15, 12, 41, 0.4) 0%, rgba(48, 43, 99, 0.4) 100%);
+  --project-card-3: linear-gradient(135deg, rgba(2, 0, 16, 0.4) 0%, rgba(26, 11, 46, 0.4) 100%);
+  --card-bottom-gradient: linear-gradient(to top, rgba(2, 0, 16, 0.95) 0%, rgba(2, 0, 16, 0.8) 50%, transparent 100%);
 
   /* Fonts */
   --font-main: 'Inter', sans-serif;
@@ -62,11 +69,18 @@
   --text-accent: #000000;
 
   /* Glassmorphism */
-  --glass-bg: rgba(255, 255, 255, 0.25);
-  --glass-border: rgba(255, 255, 255, 0.4);
-  --glass-highlight: rgba(255, 255, 255, 0.8);
-  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
-  --glass-inset-shine: inset 0 1px 1px 0 rgba(255, 255, 255, 0.5);
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.3);
+  --glass-highlight: rgba(255, 255, 255, 0.5);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  --glass-inset-shine: inset 0 1px 2px 0 rgba(255, 255, 255, 0.6), inset 0 -10px 20px rgba(255, 255, 255, 0.1);
+  --hover-shadow: rgba(0, 113, 227, 0.2);
+
+  /* Project Cards */
+  --project-card-1: linear-gradient(135deg, rgba(0, 113, 227, 0.2) 0%, rgba(0, 243, 255, 0.2) 100%);
+  --project-card-2: linear-gradient(135deg, rgba(123, 44, 191, 0.2) 0%, rgba(162, 0, 255, 0.2) 100%);
+  --project-card-3: linear-gradient(135deg, rgba(255, 0, 110, 0.2) 0%, rgba(255, 51, 102, 0.2) 100%);
+  --card-bottom-gradient: linear-gradient(to top, rgba(245, 245, 247, 0.95) 0%, rgba(245, 245, 247, 0.8) 50%, transparent 100%);
 }
 
 .theme-overlay {
@@ -193,13 +207,24 @@ ul {
 }
 
 .glass-card {
-  background: var(--bg-card);
+  background: var(--glass-bg);
   backdrop-filter: blur(40px) saturate(150%);
   -webkit-backdrop-filter: blur(40px) saturate(150%);
   border: 1px solid var(--glass-border);
   border-radius: 32px;
   box-shadow: var(--glass-shadow), var(--glass-inset-shine);
+  position: relative;
+  overflow: hidden;
   transition: transform 0.3s var(--ease-spring), border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, var(--glass-highlight) 0%, transparent 30%, transparent 70%, rgba(255,255,255,0.02) 100%);
+  pointer-events: none;
+  z-index: 2;
 }
 
 .glass-card:hover {
