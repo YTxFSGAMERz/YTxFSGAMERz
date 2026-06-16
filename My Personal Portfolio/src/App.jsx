@@ -1,6 +1,8 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, useEffect } from 'react';
 import { EmojiProvider } from 'react-apple-emojis';
 import emojiData from 'react-apple-emojis/src/data.json';
+import Lenis from 'lenis';
+import 'lenis/dist/lenis.css'; // Add lenis base css just in case
 import { PortfolioProvider, usePortfolio } from './context/PortfolioContext';
 import HUD from './components/ui/HUD';
 import GlassNavbar from './components/ui/glass-navbar';
@@ -22,10 +24,36 @@ const CustomBackground = React.lazy(() => import('./components/CustomBackground'
 const AppContent = () => {
   const { activeSection, setActiveSection, isLiteMode } = usePortfolio();
 
+  // Initialize Lenis for smooth scrolling
+  useEffect(() => {
+    const lenis = new Lenis({
+      // Using lerp instead of duration makes it feel 1:1 on trackpads 
+      // while still providing smooth interpolation for mouse wheels.
+      lerp: 0.08, 
+      wheelMultiplier: 1,
+      smoothWheel: true,
+      smoothTouch: false,
+      touchMultiplier: 2,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
   const handleNavigate = (id) => {
     setActiveSection(id);
     const element = document.getElementById(id);
     if (element) {
+      // Lenis integrates well with native scrollIntoView if handled properly,
+      // but native scrollIntoView is perfectly fine.
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
