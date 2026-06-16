@@ -20,6 +20,7 @@ import DevModeOverlay from './components/ui/DevModeOverlay';
 import BookingForm from './components/BookingForm';
 
 const CustomBackground = React.lazy(() => import('./components/CustomBackground'));
+import AppleFluidBackground from './components/ui/AppleFluidBackground';
 
 const AppContent = () => {
   const { activeSection, setActiveSection, isLiteMode } = usePortfolio();
@@ -69,6 +70,8 @@ const AppContent = () => {
           <CustomBackground activeSection={activeSection} onNavigate={handleNavigate} />
         </Suspense>
       )}
+
+      <AppleFluidBackground />
 
       <main style={{ position: 'relative', zIndex: 10, pointerEvents: 'none' }}>
         {/* Pointer events none on main prevents blocking the 3D canvas globally.
