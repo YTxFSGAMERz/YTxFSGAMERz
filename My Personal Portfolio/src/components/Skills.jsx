@@ -38,11 +38,13 @@ const SkillsMap = () => {
                 position: 'relative',
                 width: '100%',
                 height: '500px',
-                background: 'rgba(5, 5, 10, 0.6)',
+                background: 'var(--bg-card)',
                 borderRadius: '24px',
                 overflow: 'hidden',
-                border: '1px solid rgba(255, 255, 255, 0.05)',
-                backdropFilter: 'blur(20px)'
+                border: '1px solid var(--glass-border)',
+                backdropFilter: 'blur(12px)',
+                WebkitBackdropFilter: 'blur(12px)',
+                boxShadow: 'var(--glass-shadow)'
             }}
         >
             {/* Dynamic Background Spotlight */}
@@ -111,8 +113,8 @@ const SkillsMap = () => {
                             width: '60px',
                             height: '60px',
                             borderRadius: '50%',
-                            background: `linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.02))`,
-                            border: `1px solid ${isHovered ? skill.color : 'rgba(255,255,255,0.1)'}`,
+                            background: 'var(--bg-card)',
+                            border: `1px solid ${isHovered ? skill.color : 'var(--glass-border)'}`,
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
@@ -129,14 +131,14 @@ const SkillsMap = () => {
                             marginTop: '12px',
                             padding: '4px 12px',
                             background: isHovered ? skill.color : 'transparent',
-                            color: isHovered ? '#fff' : 'rgba(255,255,255,0.6)',
+                            color: isHovered ? '#fff' : 'var(--text-secondary)',
                             borderRadius: '20px',
                             fontSize: '0.85rem',
                             fontWeight: isHovered ? '600' : '400',
                             letterSpacing: '0.5px',
                             whiteSpace: 'nowrap',
                             boxShadow: isHovered ? `0 4px 15px ${skill.color}66` : 'none',
-                            border: isHovered ? 'none' : '1px solid transparent',
+                            border: isHovered ? '1px solid transparent' : '1px solid var(--glass-border)',
                             transition: 'all 0.3s ease'
                         }}>
                             {skill.name}
@@ -150,7 +152,7 @@ const SkillsMap = () => {
                 <div style={{
                     position: 'absolute',
                     inset: 0,
-                    background: 'rgba(5, 5, 10, 0.85)',
+                    background: 'var(--bg-secondary)',
                     backdropFilter: 'blur(10px)',
                     zIndex: 20,
                     display: 'flex',
@@ -162,7 +164,7 @@ const SkillsMap = () => {
                     onClick={() => setActiveSkill(null)}
                 >
                     <div style={{
-                        background: 'rgba(20, 20, 30, 0.95)',
+                        background: 'var(--bg-card)',
                         border: `1px solid ${activeSkill.color}`,
                         borderRadius: '24px',
                         padding: '2.5rem 2rem',
@@ -199,7 +201,7 @@ const SkillsMap = () => {
                             width: '80px',
                             height: '80px',
                             borderRadius: '50%',
-                            background: `linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.02))`,
+                            background: 'var(--bg-card)',
                             border: `2px solid ${activeSkill.color}`,
                             display: 'flex',
                             alignItems: 'center',
@@ -213,7 +215,7 @@ const SkillsMap = () => {
                         </div>
 
                         <h3 style={{
-                            color: '#ffffff',
+                            color: 'var(--text-primary)',
                             fontSize: '1.75rem',
                             fontWeight: '700',
                             marginBottom: '1rem',
@@ -223,7 +225,7 @@ const SkillsMap = () => {
                         </h3>
 
                         <p style={{
-                            color: 'rgba(255,255,255,0.7)',
+                            color: 'var(--text-secondary)',
                             lineHeight: '1.6',
                             fontSize: '1.05rem',
                             margin: 0
