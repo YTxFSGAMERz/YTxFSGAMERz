@@ -6,21 +6,21 @@ const projects = [
     {
         title: "AI Universe Simulation",
         category: "Generative AI",
-        image: "linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)",
+        image: "var(--project-card-1)",
         color: "#00f3ff",
         status: "Beta"
     },
     {
         title: "Quantum Neural Dashboard",
         category: "Data Visualization",
-        image: "linear-gradient(135deg, #0f0c29 0%, #302b63 100%)",
+        image: "var(--project-card-2)",
         color: "#a200ff",
         status: "Coming Soon"
     },
     {
         title: "Vigilant Sphere GeoSpectra Argus Eye",
         category: "Geospatial Intelligence HUD",
-        image: "linear-gradient(135deg, #020010 0%, #1a0b2e 100%)",
+        image: "var(--project-card-3)",
         hoverImage: "/assets/projects/project-3-hover.jpg",
         color: "#ff3366",
         status: "Live",
@@ -56,13 +56,9 @@ const Projects = () => {
                             style={{ textDecoration: 'none', display: 'block', cursor: project.link ? 'pointer' : 'default' }}
                         >
                             <TiltCard
+                                className="glass-card"
                                 style={{
-                                    height: '420px',
-                                    borderRadius: '24px',
-                                    overflow: 'hidden',
-                                    border: '1px solid rgba(255,255,255,0.05)',
-                                    background: 'rgba(2,0,16,0.5)',
-                                    backdropFilter: 'blur(10px)'
+                                    height: '420px'
                                 }}
                             >
                                 {(isHovered) => (
@@ -124,9 +120,9 @@ const Projects = () => {
                                             fontWeight: '600',
                                             letterSpacing: '0.05em',
                                             textTransform: 'uppercase',
-                                            background: isHovered ? `${project.color}33` : 'rgba(255,255,255,0.05)',
-                                            color: isHovered ? '#fff' : 'rgba(255,255,255,0.5)',
-                                            border: `1px solid ${isHovered ? `${project.color}aa` : 'rgba(255,255,255,0.1)'}`,
+                                            background: isHovered ? `${project.color}33` : 'var(--glass-bg)',
+                                            color: isHovered ? '#fff' : 'var(--text-secondary)',
+                                            border: `1px solid ${isHovered ? `${project.color}aa` : 'var(--glass-border)'}`,
                                             transition: 'all 0.3s ease',
                                             backdropFilter: 'blur(10px)',
                                             zIndex: 10,
@@ -141,7 +137,7 @@ const Projects = () => {
                                             padding: '5rem 2rem 2rem 2rem',
                                             position: 'relative',
                                             zIndex: 10,
-                                            background: 'linear-gradient(to top, rgba(2,0,16,0.95) 0%, rgba(2,0,16,0.8) 50%, transparent 100%)',
+                                            background: 'var(--card-bottom-gradient)',
                                             transform: isHovered ? 'translateY(0)' : 'translateY(8px)',
                                             transition: 'transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)'
                                         }}>
@@ -160,7 +156,7 @@ const Projects = () => {
                                             <h3 style={{
                                                 fontSize: '1.75rem',
                                                 fontWeight: '700',
-                                                color: '#ffffff',
+                                                color: 'var(--text-primary)',
                                                 marginBottom: '1.5rem',
                                                 textShadow: isHovered ? `0 0 20px rgba(255,255,255,0.3)` : 'none',
                                                 transition: 'all 0.3s ease',
@@ -174,12 +170,12 @@ const Projects = () => {
                                                 width: isHovered ? '100px' : '45px',
                                                 height: '45px',
                                                 borderRadius: '50px',
-                                                background: isHovered ? project.color : 'rgba(255,255,255,0.05)',
+                                                background: isHovered ? project.color : 'var(--glass-bg)',
                                                 display: 'flex',
                                                 alignItems: 'center',
                                                 justifyContent: 'center',
-                                                border: `1px solid ${isHovered ? project.color : 'rgba(255,255,255,0.1)'}`,
-                                                color: '#fff',
+                                                border: `1px solid ${isHovered ? project.color : 'var(--glass-border)'}`,
+                                                color: isHovered ? '#fff' : 'var(--text-primary)',
                                                 transition: 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)',
                                                 boxShadow: isHovered ? `0 0 15px ${project.color}66` : 'none',
                                                 cursor: 'pointer',
