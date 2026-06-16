@@ -15,6 +15,15 @@ export const PortfolioProvider = ({ children }) => {
         return prefersReducedMotion || isMobile; // Default to lite mode on mobile for performance safety
     });
 
+    const [theme, setTheme] = useState(() => {
+        const savedTheme = localStorage.getItem('portfolio-theme');
+        if (savedTheme) return savedTheme;
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+            return 'light';
+        }
+        return 'dark';
+    });
+
     const [activeSection, setActiveSection] = useState('hero');
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isBookingOpen, setIsBookingOpen] = useState(false);
@@ -23,6 +32,24 @@ export const PortfolioProvider = ({ children }) => {
     const toggleLiteMode = () => {
         setIsLiteMode(prev => !prev);
     };
+
+    // Toggle Apple-Style Light Mode
+    const toggleTheme = () => {
+        setTheme(prev => {
+            const nextTheme = prev === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('portfolio-theme', nextTheme);
+            return nextTheme;
+        });
+    };
+
+    // Update document class based on theme
+    useEffect(() => {
+        if (theme === 'light') {
+            document.documentElement.classList.add('light-theme');
+        } else {
+            document.documentElement.classList.remove('light-theme');
+        }
+    }, [theme]);
 
     // Keep track of scroll to update active section (simplistic version, can be expanded)
     useEffect(() => {
@@ -51,6 +78,8 @@ export const PortfolioProvider = ({ children }) => {
     const value = {
         isLiteMode,
         toggleLiteMode,
+        theme,
+        toggleTheme,
         activeSection,
         setActiveSection,
         isMenuOpen,
