@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 
 const TiltCard = ({ children, className = '', style = {} }) => {
     const cardRef = useRef(null);
-    const [transform, setTransform] = useState('perspective(1000px) rotateX(0deg) rotateY(0deg)');
+    const [transform, setTransform] = useState('none');
     const [isHovered, setIsHovered] = useState(false);
 
     // For calculating the dynamic rim light/glare position
@@ -18,10 +18,10 @@ const TiltCard = ({ children, className = '', style = {} }) => {
         const centerX = width / 2;
         const centerY = height / 2;
 
-        const rotateX = ((y - centerY) / centerY) * -5;
-        const rotateY = ((x - centerX) / centerX) * 5;
-
-        setTransform(`perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`);
+        // We use a 2D transform instead of 3D (rotateX/rotateY) 
+        // because Chrome fundamentally breaks backdrop-filter (frosted glass) 
+        // whenever a 3D perspective transform is applied.
+        setTransform(`translateY(-5px) scale(1.02)`);
 
         // Update glare position (percentage)
         setGlarePos({
@@ -36,53 +36,66 @@ const TiltCard = ({ children, className = '', style = {} }) => {
 
     const handleMouseLeave = () => {
         setIsHovered(false);
-        setTransform('perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)');
+        setTransform('none');
     };
 
     return (
         <div
             ref={cardRef}
-            className={`tilt-card ${className}`}
             onMouseMove={handleMouseMove}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
             style={{
-                ...style,
                 transform,
                 transition: 'transform 0.1s ease-out, box-shadow 0.3s ease',
-                boxShadow: isHovered ? '0 10px 40px rgba(157, 78, 221, 0.4)' : '0 8px 32px 0 rgba(0, 0, 0, 0.5)',
-                position: 'relative' // Ensure children layer correctly
+                boxShadow: isHovered ? '0 10px 40px var(--hover-shadow)' : 'none',
+                position: 'relative',
+                borderRadius: style.borderRadius || '24px',
+                height: style.height || 'auto',
+                width: style.width || '100%',
+                zIndex: isHovered ? 10 : 1 // Bring to front on hover
             }}
         >
-            {/* Dynamic CSS rim light/glare that follows the cursor */}
-            <div
+            <div 
+                className={`tilt-card ${className}`}
                 style={{
-                    position: 'absolute',
-                    top: 0, left: 0, right: 0, bottom: 0,
-                    zIndex: 10,
-                    pointerEvents: 'none',
-                    background: isHovered
-                        ? `radial-gradient(circle at ${glarePos.x}% ${glarePos.y}%, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 60%)`
-                        : 'transparent',
-                    opacity: isHovered ? 1 : 0,
-                    transition: 'opacity 0.3s ease',
-                    mixBlendMode: 'overlay',
+                    ...style,
+                    width: '100%',
+                    height: '100%',
+                    position: 'relative' // Ensure children layer correctly
                 }}
-            />
-            {/* Extremely subtle rim light border overlay */}
-            <div
-                style={{
-                    position: 'absolute',
-                    top: 0, left: 0, right: 0, bottom: 0,
-                    zIndex: 9,
-                    pointerEvents: 'none',
-                    borderRadius: 'inherit',
-                    boxShadow: isHovered ? `inset 0 0 0 1px rgba(255,255,255,0.2)` : 'inset 0 0 0 1px rgba(255,255,255,0.05)',
-                    transition: 'box-shadow 0.3s ease'
-                }}
-            />
+            >
+                {/* Dynamic CSS rim light/glare that follows the cursor */}
+                <div
+                    style={{
+                        position: 'absolute',
+                        top: 0, left: 0, right: 0, bottom: 0,
+                        zIndex: 10,
+                        pointerEvents: 'none',
+                        background: isHovered
+                            ? `radial-gradient(circle at ${glarePos.x}% ${glarePos.y}%, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 60%)`
+                            : 'transparent',
+                        opacity: isHovered ? 1 : 0,
+                        transition: 'opacity 0.3s ease',
+                        mixBlendMode: 'overlay',
+                        borderRadius: 'inherit'
+                    }}
+                />
+                {/* Extremely subtle rim light border overlay */}
+                <div
+                    style={{
+                        position: 'absolute',
+                        top: 0, left: 0, right: 0, bottom: 0,
+                        zIndex: 9,
+                        pointerEvents: 'none',
+                        borderRadius: 'inherit',
+                        boxShadow: isHovered ? `inset 0 0 0 1px rgba(255,255,255,0.2)` : 'inset 0 0 0 1px rgba(255,255,255,0.05)',
+                        transition: 'box-shadow 0.3s ease'
+                    }}
+                />
 
-            {typeof children === 'function' ? children(isHovered) : children}
+                {typeof children === 'function' ? children(isHovered) : children}
+            </div>
         </div>
     );
 };
