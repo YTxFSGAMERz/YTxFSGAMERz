@@ -1,3 +1,10 @@
-
-My Personal Portfolio
-
+node_modules/
+dist/
+*.log
+.DS_Store
+.env
+.env.*
+!.env.example
+admin/
+_fs_core_9k2m7x/
+to delete/
