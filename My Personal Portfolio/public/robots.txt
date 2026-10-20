@@ -1,0 +1,33 @@
+# robots.txt for Farhan Shaikh Official Portfolio
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+# Search Engine Crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# AI Search & RAG Answer Engines (Perplexity, ChatGPT, Claude, Gemini, Apple)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+Sitemap: https://ytxfsgamerz.github.io/sitemap.xml
