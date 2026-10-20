@@ -16,7 +16,7 @@ const connections = [
     [0, 2], [2, 1], [1, 4], [4, 5], [5, 3], [3, 0], [2, 3], [0, 4]
 ];
 
-const SkillNode = ({ position, name, isHovered, onHover, onUnhover }) => {
+const SkillNode = ({ position, isHovered, onHover, onUnhover }) => {
     const meshRef = useRef();
 
     useFrame((state, delta) => {
@@ -50,16 +50,15 @@ const ConstellationSkills = () => {
     const [hoveredNode, setHoveredNode] = useState(null);
 
     const lines = useMemo(() => {
-        return connections.map((conn, idx) => {
+        return connections.map((conn) => {
             const start = skillsData[conn[0]].pos;
             const end = skillsData[conn[1]].pos;
-            const isConnectedToHovered = hoveredNode === conn[0] || hoveredNode === conn[1];
-
-            // Build simple buffer geometry native line
             const geom = new THREE.BufferGeometry().setFromPoints([start, end]);
 
             return (
-                null
+                <line key={`${conn[0]}-${conn[1]}`} geometry={geom}>
+                    <lineBasicMaterial color={hoveredNode === conn[0] || hoveredNode === conn[1] ? '#00f3ff' : '#3a0ca3'} transparent opacity={0.4} />
+                </line>
             );
         });
     }, [hoveredNode]);
