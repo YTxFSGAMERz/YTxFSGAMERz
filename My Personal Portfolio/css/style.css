@@ -287,8 +287,8 @@ button {
 
 /* Screen Sleep & Wakeup Modes */
 .laptop-screen-viewport.is-sleeping {
-    opacity: 0;
-    pointer-events: none;
+    opacity: 0 !important;
+    pointer-events: none !important;
 }
 
 .laptop-screen-viewport.is-waking {
@@ -2151,6 +2151,14 @@ button {
 }
 
 /* ====== WEAPON CANVAS & FLYING BOOMERANG CHAKRI ====== */
+#preloader:not(.hidden) ~ #flyingWeapon,
+#preloader:not(.hidden) ~ #weaponCanvas {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
 .weapon-canvas {
     position: fixed;
     top: 0;
@@ -2168,7 +2176,7 @@ button {
     width: 68px;
     height: 68px;
     pointer-events: none;
-    z-index: 10000;
+    z-index: 9990;
     opacity: 0;
     transform: translate(-9999px, -9999px);
     transform-origin: center center;
