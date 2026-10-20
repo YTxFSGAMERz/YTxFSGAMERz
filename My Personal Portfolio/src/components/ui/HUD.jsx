@@ -1,10 +1,10 @@
 import React from 'react';
 import { usePortfolio } from '../../context/PortfolioContext';
-import { Zap, ZapOff, Menu, X, Home, User, Briefcase, FileText, Code, Mail } from 'lucide-react';
+import { Menu, X, Home, User, Briefcase, FileText, Code, Mail } from 'lucide-react';
 import './HUD.css'; // We'll create this next
 
 const HUD = () => {
-    const { isLiteMode, toggleLiteMode, activeSection, isMenuOpen, setIsMenuOpen, setIsBookingOpen } = usePortfolio();
+    const { activeSection, isMenuOpen, setIsMenuOpen, setIsBookingOpen } = usePortfolio();
 
     const navItems = [
         { id: 'hero', icon: <Home size={18} />, label: 'Home' },
@@ -22,15 +22,6 @@ const HUD = () => {
             element.scrollIntoView({ behavior: 'smooth' });
         }
         setIsMenuOpen(false);
-    };
-
-    const handleNavClick = (item) => {
-        if (item.action === 'book') {
-            usePortfolio().setIsBookingOpen(true);
-            setIsMenuOpen(false);
-        } else {
-            scrollToSection(item.id);
-        }
     };
 
     return (
