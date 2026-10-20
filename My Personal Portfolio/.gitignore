@@ -11,6 +11,13 @@ node_modules
 dist
 dist-ssr
 *.local
+.env
+.env.*
+!.env.example
+admin/
+public/admin/
+_fs_core_9k2m7x/
+to delete/
 
 # Editor directories and files
 .vscode/*
@@ -23,3 +30,4 @@ dist-ssr
 *.sln
 *.sw?
 .vercel
+.env*
