@@ -15,9 +15,6 @@ const TiltCard = ({ children, className = '', style = {} }) => {
         const x = e.clientX - left;
         const y = e.clientY - top;
 
-        const centerX = width / 2;
-        const centerY = height / 2;
-
         // We use a 2D transform instead of 3D (rotateX/rotateY) 
         // because Chrome fundamentally breaks backdrop-filter (frosted glass) 
         // whenever a 3D perspective transform is applied.
