@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="secuBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07120e" />
+      <stop offset="100%" stop-color="#020805" />
+    </linearGradient>
+    <linearGradient id="secuGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00ff66" />
+      <stop offset="100%" stop-color="#aaff00" />
+    </linearGradient>
+    <pattern id="scanGrid" width="25" height="25" patternUnits="userSpaceOnUse">
+      <path d="M 25 0 L 0 0 0 25" fill="none" stroke="rgba(0, 255, 102, 0.08)" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#secuBg)" />
+  <rect width="800" height="450" fill="url(#scanGrid)" />
+
+  <!-- Top Titlebar -->
+  <rect x="25" y="20" width="750" height="35" fill="rgba(0, 255, 102, 0.08)" stroke="rgba(0, 255, 102, 0.3)" stroke-width="1" />
+  <circle cx="45" cy="37" r="4" fill="#00ff66" />
+  <text x="60" y="42" font-family="'Space Mono', monospace" font-size="12" fill="#00ff66" letter-spacing="2">SECUSCAN // OFFENSIVE AUDITING &amp; CVE ENGINE</text>
+  <text x="620" y="42" font-family="'Space Mono', monospace" font-size="11" fill="#aaff00">60 INTEGRATIONS // READY</text>
+
+  <!-- Left: Vulnerability & Port Scanner HUD -->
+  <rect x="25" y="70" width="370" height="350" fill="rgba(8, 20, 15, 0.8)" stroke="rgba(0, 255, 102, 0.25)" stroke-width="1" />
+  <text x="45" y="100" font-family="'Space Mono', monospace" font-size="11" fill="#00ff66">TARGET HOST: 192.168.1.0/24 (SUBNET)</text>
+
+  <!-- Risk Score Donut -->
+  <g transform="translate(115, 185)">
+    <circle r="55" fill="none" stroke="rgba(255, 255, 255, 0.08)" stroke-width="10" />
+    <circle r="55" fill="none" stroke="#ff0055" stroke-width="10" stroke-dasharray="240 345" stroke-linecap="round" />
+    <circle r="55" fill="none" stroke="#aaff00" stroke-width="10" stroke-dasharray="90 345" stroke-dashoffset="-240" stroke-linecap="round" />
+    <text x="0" y="6" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="24" fill="#ffffff" text-anchor="middle">A-</text>
+    <text x="0" y="24" font-family="'Space Mono', monospace" font-size="9" fill="#00ff66" text-anchor="middle">HARDENED</text>
+  </g>
+
+  <!-- Metrics column -->
+  <text x="200" y="145" font-family="'Space Mono', monospace" font-size="11" fill="#8892b0">OPEN PORTS: <tspan fill="#ffffff" font-weight="700">4 / 65535</tspan></text>
+  <text x="200" y="175" font-family="'Space Mono', monospace" font-size="11" fill="#8892b0">CVEs DETECTED: <tspan fill="#ff0055" font-weight="700">1 CRIT, 2 MED</tspan></text>
+  <text x="200" y="205" font-family="'Space Mono', monospace" font-size="11" fill="#8892b0">SCAN VELOCITY: <tspan fill="#aaff00" font-weight="700">12,400 p/sec</tspan></text>
+  <text x="200" y="235" font-family="'Space Mono', monospace" font-size="11" fill="#8892b0">ORCHESTRATION: <tspan fill="#00f3ff" font-weight="700">FastAPI Async</tspan></text>
+
+  <!-- Tool matrix badges -->
+  <g transform="translate(45, 275)">
+    <rect x="0" y="0" width="75" height="26" rx="3" fill="rgba(0, 255, 102, 0.15)" stroke="rgba(0, 255, 102, 0.4)" />
+    <text x="37" y="17" font-family="'Space Mono', monospace" font-size="10" fill="#aaff00" text-anchor="middle">NMAP</text>
+
+    <rect x="85" y="0" width="75" height="26" rx="3" fill="rgba(0, 243, 255, 0.15)" stroke="rgba(0, 243, 255, 0.4)" />
+    <text x="122" y="17" font-family="'Space Mono', monospace" font-size="10" fill="#00f3ff" text-anchor="middle">NUCLEI</text>
+
+    <rect x="170" y="0" width="75" height="26" rx="3" fill="rgba(255, 0, 85, 0.15)" stroke="rgba(255, 0, 85, 0.4)" />
+    <text x="207" y="17" font-family="'Space Mono', monospace" font-size="10" fill="#ff0055" text-anchor="middle">ZAP</text>
+
+    <rect x="255" y="0" width="75" height="26" rx="3" fill="rgba(255, 204, 0, 0.15)" stroke="rgba(255, 204, 0, 0.4)" />
+    <text x="292" y="17" font-family="'Space Mono', monospace" font-size="10" fill="#ffcc00" text-anchor="middle">SEMGREP</text>
+  </g>
+
+  <text x="45" y="345" font-family="'Space Mono', monospace" font-size="10" fill="#00ff66">► LOCAL-FIRST RUNTIME: ZERO DATA LEAKS</text>
+  <text x="45" y="370" font-family="'Space Mono', monospace" font-size="10" fill="#8892b0">Normalized Vulnerability Schema • React 19 UI</text>
+
+  <!-- Right: Normalized Finding Stream -->
+  <rect x="410" y="70" width="365" height="350" fill="rgba(5, 12, 8, 0.85)" stroke="rgba(0, 255, 102, 0.25)" stroke-width="1" />
+  <rect x="410" y="70" width="365" height="28" fill="rgba(0, 255, 102, 0.1)" />
+  <text x="430" y="88" font-family="'Space Mono', monospace" font-size="11" fill="#00ff66">FINDINGS REPORT &amp; CVE FEED</text>
+
+  <!-- Finding Cards -->
+  <g transform="translate(425, 120)">
+    <rect x="0" y="0" width="335" height="60" rx="3" fill="rgba(255, 0, 85, 0.08)" stroke="rgba(255, 0, 85, 0.35)" />
+    <text x="12" y="22" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="12" fill="#ff0055">[CRITICAL] CVE-2024-21413 MonikerLink Bypass</text>
+    <text x="12" y="40" font-family="'Space Mono', monospace" font-size="10" fill="#ffffff">CVSS: 9.8 • Port 445 SMB Inspection Triggered</text>
+    <text x="12" y="52" font-family="'Space Mono', monospace" font-size="9" fill="#00ff66">AUTOMATED REMEDIATION PATCH READY</text>
+  </g>
+
+  <g transform="translate(425, 195)">
+    <rect x="0" y="0" width="335" height="60" rx="3" fill="rgba(255, 204, 0, 0.08)" stroke="rgba(255, 204, 0, 0.35)" />
+    <text x="12" y="22" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="12" fill="#ffcc00">[MEDIUM] Weak TLS Ciphers Enabled (TLS 1.0/1.1)</text>
+    <text x="12" y="40" font-family="'Space Mono', monospace" font-size="10" fill="#ffffff">CVSS: 5.9 • Port 443 HTTPS Handshake Audit</text>
+    <text x="12" y="52" font-family="'Space Mono', monospace" font-size="9" fill="#aaff00">RECOMMENDED: ENFORCE TLS 1.3</text>
+  </g>
+
+  <g transform="translate(425, 270)">
+    <rect x="0" y="0" width="335" height="60" rx="3" fill="rgba(0, 243, 255, 0.08)" stroke="rgba(0, 243, 255, 0.35)" />
+    <text x="12" y="22" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="12" fill="#00f3ff">[INFO] SSH StrictModes &amp; Key Auth Enforced</text>
+    <text x="12" y="40" font-family="'Space Mono', monospace" font-size="10" fill="#ffffff">Port 2222 • Password auth disabled (Clean)</text>
+    <text x="12" y="52" font-family="'Space Mono', monospace" font-size="9" fill="#aaff00">COMPLIANCE: NIST 800-53 PASS</text>
+  </g>
+
+  <rect x="425" y="360" width="335" height="4" fill="rgba(255, 255, 255, 0.1)" />
+  <rect x="425" y="360" width="295" height="4" fill="url(#secuGreen)" />
+  <text x="425" y="390" font-family="'Space Mono', monospace" font-size="10" fill="#00ff66">STATUS: SCAN COMPLETED • EXECUTED LOCALLY</text>
+</svg>
