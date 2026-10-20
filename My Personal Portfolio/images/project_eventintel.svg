@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e14" />
+      <stop offset="100%" stop-color="#030508" />
+    </linearGradient>
+    <linearGradient id="neonCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f3ff" />
+      <stop offset="100%" stop-color="#00a8ff" />
+    </linearGradient>
+    <linearGradient id="neonGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#aaff00" />
+      <stop offset="100%" stop-color="#00ff66" />
+    </linearGradient>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(0, 243, 255, 0.07)" stroke-width="1" />
+    </pattern>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="450" fill="url(#bgGrad)" />
+  <rect width="800" height="450" fill="url(#grid)" />
+
+  <!-- Top Tactical HUD Banner -->
+  <rect x="25" y="20" width="750" height="35" fill="rgba(0, 243, 255, 0.05)" stroke="rgba(0, 243, 255, 0.25)" stroke-width="1" />
+  <circle cx="45" cy="37" r="4" fill="#aaff00" />
+  <text x="60" y="42" font-family="'Space Mono', monospace" font-size="12" fill="#00f3ff" letter-spacing="2">EVENT-INTELLIGENCE-AGENT // RECON ENGINE v2.4</text>
+  <text x="640" y="42" font-family="'Space Mono', monospace" font-size="11" fill="#aaff00">TELEGRAM: ONLINE</text>
+
+  <!-- Left Telemetry Panel: Radar & Stats -->
+  <rect x="25" y="70" width="360" height="350" fill="rgba(10, 15, 25, 0.7)" stroke="rgba(0, 243, 255, 0.2)" stroke-width="1" />
+  
+  <!-- Radar Widget -->
+  <g transform="translate(130, 180)">
+    <circle r="75" fill="none" stroke="rgba(0, 243, 255, 0.25)" stroke-width="1" />
+    <circle r="50" fill="none" stroke="rgba(0, 243, 255, 0.15)" stroke-dasharray="4 4" />
+    <circle r="25" fill="none" stroke="rgba(0, 243, 255, 0.2)" stroke-width="1" />
+    <line x1="-80" y1="0" x2="80" y2="0" stroke="rgba(0, 243, 255, 0.2)" />
+    <line x1="0" y1="-80" x2="0" y2="80" stroke="rgba(0, 243, 255, 0.2)" />
+    <polygon points="0,0 60,-40 70,-20" fill="url(#neonCyan)" opacity="0.25" />
+    <!-- Blip targets -->
+    <circle cx="35" cy="-25" r="3" fill="#aaff00" />
+    <circle cx="-40" cy="30" r="3" fill="#00f3ff" />
+    <circle cx="48" cy="40" r="4" fill="#ff0055" />
+    <circle cx="-20" cy="-45" r="3" fill="#ffcc00" />
+  </g>
+
+  <!-- Radar Metrics -->
+  <text x="235" y="125" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="20" fill="#ffffff">842</text>
+  <text x="235" y="142" font-family="'Space Mono', monospace" font-size="10" fill="#8892b0">DISCOVERED EVENTS</text>
+
+  <text x="235" y="180" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="20" fill="#aaff00">$2.4M+</text>
+  <text x="235" y="197" font-family="'Space Mono', monospace" font-size="10" fill="#8892b0">PRIZE POOL TRACKED</text>
+
+  <text x="235" y="235" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="20" fill="#00f3ff">100%</text>
+  <text x="235" y="252" font-family="'Space Mono', monospace" font-size="10" fill="#8892b0">OFFICIAL VERIFIED</text>
+
+  <!-- Category Badges -->
+  <rect x="45" y="290" width="100" height="24" rx="3" fill="rgba(170, 255, 0, 0.15)" stroke="rgba(170, 255, 0, 0.4)" />
+  <text x="95" y="306" font-family="'Space Mono', monospace" font-size="10" fill="#aaff00" text-anchor="middle">HACKATHONS</text>
+
+  <rect x="155" y="290" width="100" height="24" rx="3" fill="rgba(0, 243, 255, 0.15)" stroke="rgba(0, 243, 255, 0.4)" />
+  <text x="205" y="306" font-family="'Space Mono', monospace" font-size="10" fill="#00f3ff" text-anchor="middle">GRANTS/SWAG</text>
+
+  <rect x="265" y="290" width="105" height="24" rx="3" fill="rgba(255, 0, 85, 0.15)" stroke="rgba(255, 0, 85, 0.4)" />
+  <text x="317" y="306" font-family="'Space Mono', monospace" font-size="10" fill="#ff0055" text-anchor="middle">FELLOWSHIPS</text>
+
+  <text x="45" y="360" font-family="'Space Mono', monospace" font-size="11" fill="#00f3ff">AUTONOMOUS SCRAPER CLUSTER: 12 SOURCES</text>
+  <text x="45" y="385" font-family="'Space Mono', monospace" font-size="10" fill="#8892b0">Devpost • Unstop • MLH • GitHub Grants • ETHGlobal</text>
+
+  <!-- Right Panel: Live Feed Terminal -->
+  <rect x="405" y="70" width="370" height="350" fill="rgba(5, 8, 15, 0.85)" stroke="rgba(0, 243, 255, 0.25)" stroke-width="1" />
+  
+  <rect x="405" y="70" width="370" height="28" fill="rgba(0, 243, 255, 0.1)" />
+  <circle cx="420" cy="84" r="3.5" fill="#ff5f56" />
+  <circle cx="432" cy="84" r="3.5" fill="#ffbd2e" />
+  <circle cx="444" cy="84" r="3.5" fill="#27c93f" />
+  <text x="460" y="88" font-family="'Space Mono', monospace" font-size="10" fill="#00f3ff">DISPATCH FEED // telegram_channel_bot</text>
+
+  <!-- Live Feed items -->
+  <g transform="translate(420, 125)">
+    <rect x="0" y="0" width="340" height="60" rx="4" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(170, 255, 0, 0.3)" />
+    <text x="12" y="20" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="13" fill="#ffffff">🚀 Google AI Hackathon 2026</text>
+    <text x="12" y="38" font-family="'Space Mono', monospace" font-size="10" fill="#aaff00">PRIZE: $100,000 • GLOBAL • HYBRID</text>
+    <text x="12" y="52" font-family="'Space Mono', monospace" font-size="9" fill="#00f3ff">MATCH SCORE: 98% • DISPATCHED VIA TELEGRAM</text>
+  </g>
+
+  <g transform="translate(420, 200)">
+    <rect x="0" y="0" width="340" height="60" rx="4" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(0, 243, 255, 0.3)" />
+    <text x="12" y="20" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="13" fill="#ffffff">🌐 MIT Climate Tech Fellowship</text>
+    <text x="12" y="38" font-family="'Space Mono', monospace" font-size="10" fill="#00f3ff">GRANT: $50,000 + FULL TRAVEL &amp; HOUSING</text>
+    <text x="12" y="52" font-family="'Space Mono', monospace" font-size="9" fill="#8892b0">DEADLINE: NOV 15 • OFFICIAL API VERIFIED</text>
+  </g>
+
+  <g transform="translate(420, 275)">
+    <rect x="0" y="0" width="340" height="60" rx="4" fill="rgba(255, 255, 255, 0.03)" stroke="rgba(255, 0, 85, 0.3)" />
+    <text x="12" y="20" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="13" fill="#ffffff">⚡ ETHGlobal Tokyo Hackathon</text>
+    <text x="12" y="38" font-family="'Space Mono', monospace" font-size="10" fill="#ff0055">SWAG: GEAR + FREE ENTRY • STAKED</text>
+    <text x="12" y="52" font-family="'Space Mono', monospace" font-size="9" fill="#8892b0">STATUS: ACCEPTING REGISTRATIONS</text>
+  </g>
+
+  <text x="420" y="375" font-family="'Space Mono', monospace" font-size="10" fill="#aaff00">► AUTO-DISPATCH ACTIVE: 24/7 CRON LOOP</text>
+  <rect x="420" y="390" width="340" height="3" fill="url(#neonGreen)" />
+</svg>
