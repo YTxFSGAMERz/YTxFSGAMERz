@@ -2,20 +2,33 @@
   <!-- Custom Neon Animated SVG matching the user's Portfolio Theme -->
   <img src="assets/animated-header.svg" alt="Animated Neon Header" width="100%" />
 
-  <h3>Leveling up in coding and gaming 🚀</h3>
+  <h1>Farhan Shaikh (Farhan) 👋</h1>
+  <h3>AI &amp; Cybersecurity Systems Architect | NASA Space Apps '26 Global Finalist | SIH '26 Lead 🚀</h3>
   
   <p>
-    <b>I'm currently working on AI agents, web apps, and experimental projects using modern APIs and automation tools!</b>
+    <b>Computer Science Engineer turning ideas into intelligent, memory-safe systems and offensive security architectures.</b>
+  </p>
+
+  <p>
+    <a href="https://ytxfsgamerz.github.io/">
+      <img src="https://img.shields.io/badge/🌐_Official_Portfolio-Farhan_Shaikh-00f3ff?style=for-the-badge&logoColor=white&labelColor=08090b" alt="Farhan Shaikh Official Portfolio">
+    </a>
+    <a href="https://ytxfsgamerz.github.io/">
+      <img src="https://img.shields.io/badge/🚀_NASA_Space_Apps_'26-Finalist-aaff00?style=for-the-badge&logoColor=black&labelColor=08090b" alt="NASA Space Apps 2026">
+    </a>
+    <a href="https://ytxfsgamerz.github.io/">
+      <img src="https://img.shields.io/badge/🏆_SIH_'26-National_Lead-b026ff?style=for-the-badge&logoColor=white&labelColor=08090b" alt="Smart India Hackathon 2026">
+    </a>
   </p>
 
   <br>
 
   <!-- Interactive Premium Socials via SkillIcons -->
-  <a href="https://linkedin.com/in/farhan-shaikh-753551358"><img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn"></a>
+  <a href="https://linkedin.com/in/farhan-shaikh-fs"><img src="https://skillicons.dev/icons?i=linkedin" alt="LinkedIn"></a>
   <a href="https://github.com/YTxFSGAMERz"><img src="https://skillicons.dev/icons?i=github" alt="GitHub"></a>
   <a href="mailto:f98561965@gmail.com"><img src="https://skillicons.dev/icons?i=gmail" alt="Email"></a>
-  <a href="https://discord.gg/Qd6mZA4kpH"><img src="https://skillicons.dev/icons?i=discord" alt="Discord"></a>
-  <a href="https://x.com/Farhan95213"><img src="https://skillicons.dev/icons?i=twitter" alt="Twitter"></a>
+  <a href="https://discord.com/users/1354206425068343419"><img src="https://skillicons.dev/icons?i=discord" alt="Discord"></a>
+  <a href="https://x.com/YTxFSGAMERz"><img src="https://skillicons.dev/icons?i=twitter" alt="Twitter"></a>
 
 </div>
 
