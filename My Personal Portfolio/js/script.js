@@ -164,12 +164,14 @@ function onFirstUserGesture() {
     if (initialAudioBlocked && !hasAudioPlayedSuccessfully) {
         initialAudioBlocked = false;
         hasAudioPlayedSuccessfully = true;
-        // Re-launch weapon sequence with full audio on first interaction
-        setTimeout(() => {
-            if (typeof launchBoomerangChakri === 'function') {
-                launchBoomerangChakri(true);
-            }
-        }, 60);
+        const preloaderEl = document.getElementById('preloader');
+        if (!preloaderEl || preloaderEl.classList.contains('hidden') || preloaderEl.style.display === 'none') {
+            setTimeout(() => {
+                if (typeof launchBoomerangChakri === 'function') {
+                    launchBoomerangChakri(true);
+                }
+            }, 60);
+        }
     }
 }
 
@@ -308,13 +310,31 @@ try {
             }
         }, 160);
 
+        // 3. Power on laptop screen & keyboard RGB flare
+        const rgbSurge = document.getElementById('keyboardRgbSurge');
+        if (rgbSurge) rgbSurge.classList.add('ignited');
+
+        const viewport = document.getElementById('laptopScreenViewport');
+        const powerLine = document.getElementById('screenPowerLine');
+        const wakeFlash = document.getElementById('screenWakeFlash');
+        const crtFlicker = document.getElementById('screenCrtFlicker');
+
+        if (powerLine) powerLine.classList.add('active');
+        if (wakeFlash) wakeFlash.classList.add('active');
+        if (crtFlicker) crtFlicker.classList.add('active');
+
+        if (viewport) {
+            viewport.classList.remove('is-sleeping');
+            viewport.classList.add('is-waking');
+        }
+
         // Update BIOS subtitle to indicate booting has started
         const biosBrandSub = document.getElementById('biosBrandSub');
         if (biosBrandSub) {
             biosBrandSub.textContent = 'AUTHORIZING • BOOTING KALI LINUX...';
         }
 
-        // 3. Run authentic BIOS splash & Kali Linux terminal boot sequence on the laptop screen
+        // 4. Run authentic BIOS splash & Kali Linux terminal boot sequence on the laptop screen
         runKaliTerminalSequence();
     }
 
@@ -517,28 +537,14 @@ try {
             }
         });
 
-        // 2. Tactile Keyboard RGB Flare (T=260ms)
-        setTimeout(() => {
-            const rgbSurge = document.getElementById('keyboardRgbSurge');
-            if (rgbSurge) rgbSurge.classList.add('ignited');
-        }, 260);
-
-        // 3. Ensure laptop screen CRT & viewport is powered on and displaying the standby BIOS screen
+        // 2. Ensure laptop screen CRT & viewport is 100% OFF / sleeping on load
         const viewport = document.getElementById('laptopScreenViewport');
-        const powerLine = document.getElementById('screenPowerLine');
-        const wakeFlash = document.getElementById('screenWakeFlash');
-        const crtFlicker = document.getElementById('screenCrtFlicker');
-
-        if (powerLine) powerLine.classList.add('active');
-        if (wakeFlash) wakeFlash.classList.add('active');
-        if (crtFlicker) crtFlicker.classList.add('active');
-
         if (viewport) {
-            viewport.classList.remove('is-sleeping');
-            viewport.classList.add('is-waking');
+            viewport.classList.add('is-sleeping');
+            viewport.classList.remove('is-waking');
         }
 
-        // Ensure BIOS stage is displayed on standby and Kali window is hidden
+        // Ensure BIOS stage and Kali window are reset
         const biosStage = document.getElementById('biosBootStage');
         const kaliWindow = document.getElementById('kaliTerminalWindow');
         const biosLoaderBar = document.getElementById('biosLoaderBar');
@@ -2355,6 +2361,10 @@ function initWeaponChakri() {
 
     // The Boomerang Flight Sequence
     launchBoomerangChakri = function(force = false) {
+        const preloader = document.getElementById('preloader');
+        if (preloader && !preloader.classList.contains('hidden') && preloader.style.display !== 'none') {
+            return;
+        }
         if (isFlying && !force) return;
         isFlying = true;
 
