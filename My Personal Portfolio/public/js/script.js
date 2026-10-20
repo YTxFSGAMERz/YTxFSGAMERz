@@ -274,11 +274,6 @@ try {
     // Triggered strictly upon user action (Click / Tap / Enter)
     function initiateHackingAndEnter() {
         if (preloaderCompleted) return;
-        if (hasInitiatedHacking) {
-            // Second click fast-tracks into portfolio
-            finishPreloader();
-            return;
-        }
         hasInitiatedHacking = true;
 
         // 1. Legally Unlock Audio via user gesture & ensure song is playing immediately
@@ -288,7 +283,7 @@ try {
             playBackgroundMusic(false);
         }
 
-        // 2. Tactile 3D Keypress Depression Animation & SFX ("jaise dabate hai to piche ke taraf jata hai")
+        // 2. Tactile 3D Keypress Depression Animation & SFX
         if (enterBtn) {
             enterBtn.classList.add('is-pressed');
         }
@@ -297,34 +292,17 @@ try {
         playSfx('sfxHover', 0.5);
 
         // Smoothly fade out switch assembly after mechanical bottom-out
-        setTimeout(() => {
-            if (enterBtnWrapper) {
-                enterBtnWrapper.classList.remove('visible');
-                enterBtnWrapper.classList.add('fade-out');
-            }
-            if (enterBtn) {
-                enterBtn.classList.remove('visible');
-                enterBtn.classList.add('fade-out');
-            }
-        }, 160);
-
-        // 4. Power on screen CRT & Flash + Vintage Black & White TV Boot Flicker
-        const viewport = document.getElementById('laptopScreenViewport');
-        const powerLine = document.getElementById('screenPowerLine');
-        const wakeFlash = document.getElementById('screenWakeFlash');
-        const crtFlicker = document.getElementById('screenCrtFlicker');
-
-        if (powerLine) powerLine.classList.add('active');
-        if (wakeFlash) wakeFlash.classList.add('active');
-        if (crtFlicker) crtFlicker.classList.add('active');
-
-        if (viewport) {
-            viewport.classList.remove('is-sleeping');
-            viewport.classList.add('is-waking');
+        if (enterBtnWrapper) {
+            enterBtnWrapper.classList.remove('visible');
+            enterBtnWrapper.classList.add('fade-out');
+        }
+        if (enterBtn) {
+            enterBtn.classList.remove('visible');
+            enterBtn.classList.add('fade-out');
         }
 
-        // 5. Run authentic Kali Linux terminal boot sequence
-        runKaliTerminalSequence();
+        // 3. Fast-track Hollywood Dolly Zoom into portfolio!
+        finishPreloader();
     }
 
     // User interaction listeners: Button, Screen Tap, or Enter/Space Key
@@ -532,7 +510,25 @@ try {
             if (rgbSurge) rgbSurge.classList.add('ignited');
         }, 260);
 
-        // 3. Reveal the 3D Mechanical Enter Keycap Trigger: "CLICK HERE TO ENTER" immediately
+        // 3. Power on laptop screen CRT, Flash & wake immediately on docking
+        const viewport = document.getElementById('laptopScreenViewport');
+        const powerLine = document.getElementById('screenPowerLine');
+        const wakeFlash = document.getElementById('screenWakeFlash');
+        const crtFlicker = document.getElementById('screenCrtFlicker');
+
+        if (powerLine) powerLine.classList.add('active');
+        if (wakeFlash) wakeFlash.classList.add('active');
+        if (crtFlicker) crtFlicker.classList.add('active');
+
+        if (viewport) {
+            viewport.classList.remove('is-sleeping');
+            viewport.classList.add('is-waking');
+        }
+
+        // 4. Run authentic BIOS splash & Kali Linux terminal boot sequence on the laptop screen
+        runKaliTerminalSequence();
+
+        // 5. Reveal the 3D Mechanical Enter Keycap Trigger: "CLICK HERE TO ENTER" immediately
         setTimeout(() => {
             if (!hasInitiatedHacking) {
                 if (enterBtnWrapper) enterBtnWrapper.classList.add('visible');
