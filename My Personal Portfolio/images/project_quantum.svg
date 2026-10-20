@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="quantumBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080c14" />
+      <stop offset="100%" stop-color="#03050a" />
+    </linearGradient>
+    <linearGradient id="bullishGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#aaff00" />
+      <stop offset="100%" stop-color="#00ff88" />
+    </linearGradient>
+    <linearGradient id="bearishMagenta" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ff007f" />
+      <stop offset="100%" stop-color="#ff55a3" />
+    </linearGradient>
+    <linearGradient id="cyberCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f3ff" />
+      <stop offset="100%" stop-color="#0088ff" />
+    </linearGradient>
+    <linearGradient id="waveSurfaceGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(0, 243, 255, 0.45)" />
+      <stop offset="35%" stop-color="rgba(170, 255, 0, 0.35)" />
+      <stop offset="70%" stop-color="rgba(255, 0, 127, 0.3)" />
+      <stop offset="100%" stop-color="rgba(8, 12, 20, 0.95)" />
+    </linearGradient>
+    <pattern id="qGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="rgba(0, 243, 255, 0.06)" stroke-width="1" />
+    </pattern>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#quantumBg)" />
+  <rect width="800" height="450" fill="url(#qGrid)" />
+
+  <!-- Top Tactical HUD Banner -->
+  <rect x="25" y="20" width="750" height="35" fill="rgba(0, 243, 255, 0.05)" stroke="rgba(0, 243, 255, 0.3)" stroke-width="1" />
+  <circle cx="45" cy="37" r="4" fill="#00f3ff" filter="url(#glow)" />
+  <text x="60" y="42" font-family="'Space Mono', monospace" font-size="12" fill="#00f3ff" letter-spacing="2">QUANTUM MARKET PULSE // 4D ALPHA ENGINE</text>
+  <text x="545" y="42" font-family="'Space Mono', monospace" font-size="11" fill="#aaff00">PYVISTA GPU VTK // 120 FPS</text>
+
+  <!-- Left Column: 3D Topological Energy Landscape Mesh -->
+  <rect x="25" y="68" width="455" height="355" fill="rgba(8, 14, 24, 0.85)" stroke="rgba(0, 243, 255, 0.22)" stroke-width="1" />
+  
+  <rect x="25" y="68" width="455" height="26" fill="rgba(0, 243, 255, 0.08)" />
+  <text x="40" y="85" font-family="'Space Mono', monospace" font-size="11" fill="#00f3ff">4D ENERGY TOPOLOGY SURFACE • E(t, a)</text>
+  <text x="390" y="85" font-family="'Space Mono', monospace" font-size="9" fill="#8892b0">Z-SCORE SHOCK: 2.0σ</text>
+
+  <!-- 3D Wave Wireframe / Mesh Visualization -->
+  <g transform="translate(40, 105)">
+    <!-- 3D Perspective Grid Background -->
+    <path d="M 10 170 L 415 170 L 380 90 L 45 90 Z" fill="rgba(0, 20, 40, 0.4)" stroke="rgba(0, 243, 255, 0.15)" stroke-width="1" />
+    <line x1="100" y1="170" x2="115" y2="90" stroke="rgba(0, 243, 255, 0.1)" />
+    <line x1="200" y1="170" x2="200" y2="90" stroke="rgba(0, 243, 255, 0.1)" />
+    <line x1="300" y1="170" x2="285" y2="90" stroke="rgba(0, 243, 255, 0.1)" />
+
+    <!-- Undulating Topological 3D Wave Bands -->
+    <!-- Band 4 (Deep Gold / Back) -->
+    <path d="M 45 95 Q 110 70 170 85 T 280 65 T 380 90" fill="none" stroke="rgba(255, 183, 0, 0.4)" stroke-width="1.5" stroke-dasharray="3 3" />
+    <!-- Band 3 (SPY 500) -->
+    <path d="M 35 115 Q 105 85 180 110 T 300 80 T 390 110" fill="none" stroke="rgba(0, 180, 255, 0.55)" stroke-width="1.8" />
+    <!-- Band 2 (ETH-USD Wave) -->
+    <path d="M 25 138 Q 95 90 190 130 T 310 85 T 405 135" fill="none" stroke="url(#bearishMagenta)" stroke-width="2" />
+    <!-- Band 1 (BTC-USD Alpha Wave Front) -->
+    <path d="M 15 165 Q 85 80 160 145 T 265 60 T 360 120 T 415 160" fill="none" stroke="url(#bullishGreen)" stroke-width="2.8" filter="url(#glow)" />
+    <!-- Solid Wave Surface Fill Beneath -->
+    <path d="M 15 165 Q 85 80 160 145 T 265 60 T 360 120 T 415 160 L 415 175 L 15 175 Z" fill="url(#waveSurfaceGrad)" opacity="0.6" />
+
+    <!-- Shock Anomaly Markers (Glow + Ring) -->
+    <circle cx="265" cy="60" r="5" fill="#aaff00" filter="url(#glow)" />
+    <circle cx="265" cy="60" r="10" fill="none" stroke="#aaff00" stroke-width="1" opacity="0.7" />
+    <text x="278" y="58" font-family="'Space Mono', monospace" font-size="8" fill="#aaff00">SHOCK +3.8σ (BULL RUN)</text>
+
+    <circle cx="310" cy="85" r="4" fill="#ff007f" filter="url(#glow)" />
+    <circle cx="310" cy="85" r="8" fill="none" stroke="#ff007f" stroke-width="1" opacity="0.7" />
+    <text x="322" y="85" font-family="'Space Mono', monospace" font-size="8" fill="#ff007f">DROP -3.2σ</text>
+
+    <!-- Axes Labels -->
+    <text x="18" y="190" font-family="'Space Mono', monospace" font-size="8" fill="#64748b">ASSETS: BTC • ETH • SPY • GOLD</text>
+    <text x="310" y="190" font-family="'Space Mono', monospace" font-size="8" fill="#64748b">TIME: 3400 TRADING DAYS →</text>
+  </g>
+
+  <!-- Math Formulation Box (Bottom-Left) -->
+  <g transform="translate(40, 310)">
+    <rect x="0" y="0" width="425" height="100" rx="4" fill="rgba(0, 0, 0, 0.65)" stroke="rgba(0, 243, 255, 0.2)" />
+    <text x="12" y="20" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="11" fill="#ffffff">Physical Energy &amp; Alpha Momentum Formulation</text>
+    
+    <text x="12" y="38" font-family="'Space Mono', monospace" font-size="9" fill="#00f3ff">
+      E(t, a) = 0.35·Vol + 0.25·|Mom| + 0.25·VolSpike + 0.15·Sent
+    </text>
+    <text x="12" y="55" font-family="'Space Mono', monospace" font-size="9" fill="#aaff00">
+      α(t, a) = sign(Mom) × tanh(4 × |Mom|) ∈ [-1.0, +1.0]
+    </text>
+    <text x="12" y="73" font-family="'Space Mono', monospace" font-size="8.5" fill="#8892b0">
+      Gaussian Spline: scipy.ndimage.zoom(90×4 → 90×90 wave mesh)
+    </text>
+    
+    <!-- Legend Chips -->
+    <rect x="12" y="80" width="8" height="8" rx="2" fill="#aaff00" />
+    <text x="24" y="88" font-family="'Space Mono', monospace" font-size="7.5" fill="#aaff00">α &gt; 0 Bullish</text>
+
+    <rect x="110" y="80" width="8" height="8" rx="2" fill="#ff007f" />
+    <text x="122" y="88" font-family="'Space Mono', monospace" font-size="7.5" fill="#ff007f">α &lt; 0 Bearish</text>
+
+    <rect x="208" y="80" width="8" height="8" rx="2" fill="#0088ff" />
+    <text x="220" y="88" font-family="'Space Mono', monospace" font-size="7.5" fill="#0088ff">α ≈ 0 Neutral</text>
+
+    <rect x="306" y="80" width="8" height="8" rx="2" fill="#ffb700" />
+    <text x="318" y="88" font-family="'Space Mono', monospace" font-size="7.5" fill="#ffb700">GPU VTK Grid</text>
+  </g>
+
+  <!-- Right Column: Performance Telemetry & Compositor Specs -->
+  <rect x="495" y="68" width="280" height="355" fill="rgba(10, 15, 26, 0.85)" stroke="rgba(170, 255, 0, 0.25)" stroke-width="1" />
+  
+  <rect x="495" y="68" width="280" height="26" fill="rgba(170, 255, 0, 0.08)" />
+  <text x="510" y="85" font-family="'Space Mono', monospace" font-size="11" fill="#aaff00">HARDWARE COMPOSITOR ENGINE</text>
+
+  <!-- Metric 1: 120 FPS -->
+  <g transform="translate(510, 105)">
+    <rect x="0" y="0" width="120" height="65" rx="3" fill="rgba(0, 243, 255, 0.05)" stroke="rgba(0, 243, 255, 0.25)" />
+    <text x="10" y="28" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="22" fill="#00f3ff">120 FPS</text>
+    <text x="10" y="46" font-family="'Space Mono', monospace" font-size="8" fill="#8892b0">HYBRID COMPOSITOR</text>
+    <text x="10" y="57" font-family="'Space Mono', monospace" font-size="7.5" fill="#aaff00">NVENC HARDWARE</text>
+  </g>
+
+  <!-- Metric 2: 720 x 1280 (9:16) -->
+  <g transform="translate(640, 105)">
+    <rect x="0" y="0" width="120" height="65" rx="3" fill="rgba(170, 255, 0, 0.05)" stroke="rgba(170, 255, 0, 0.25)" />
+    <text x="10" y="28" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="17" fill="#aaff00">720×1280</text>
+    <text x="10" y="46" font-family="'Space Mono', monospace" font-size="8" fill="#8892b0">9:16 VERTICAL</text>
+    <text x="10" y="57" font-family="'Space Mono', monospace" font-size="7.5" fill="#00f3ff">TIKTOK NATIVE</text>
+  </g>
+
+  <!-- Metric 3: 3400+ Days -->
+  <g transform="translate(510, 180)">
+    <rect x="0" y="0" width="120" height="65" rx="3" fill="rgba(255, 0, 127, 0.05)" stroke="rgba(255, 0, 127, 0.25)" />
+    <text x="10" y="28" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="20" fill="#ff007f">3,400+</text>
+    <text x="10" y="46" font-family="'Space Mono', monospace" font-size="8" fill="#8892b0">TRADING DAYS</text>
+    <text x="10" y="57" font-family="'Space Mono', monospace" font-size="7.5" fill="#aaff00">HISTORIC DEPTH</text>
+  </g>
+
+  <!-- Metric 4: 10h to 15m GPU Acceleration -->
+  <g transform="translate(640, 180)">
+    <rect x="0" y="0" width="120" height="65" rx="3" fill="rgba(255, 183, 0, 0.05)" stroke="rgba(255, 183, 0, 0.25)" />
+    <text x="10" y="28" font-family="'Space Grotesk', sans-serif" font-weight="800" font-size="20" fill="#ffb700">40× SPEED</text>
+    <text x="10" y="46" font-family="'Space Mono', monospace" font-size="8" fill="#8892b0">10H CPU → 15M GPU</text>
+    <text x="10" y="57" font-family="'Space Mono', monospace" font-size="7.5" fill="#00f3ff">PARALLEL VTK</text>
+  </g>
+
+  <!-- CLI Render Command Box -->
+  <g transform="translate(510, 255)">
+    <rect x="0" y="0" width="250" height="95" rx="3" fill="rgba(0, 0, 0, 0.7)" stroke="rgba(255, 255, 255, 0.1)" />
+    <text x="10" y="20" font-family="'Space Mono', monospace" font-size="8.5" fill="#64748b">$ python render.py --preview</text>
+    <text x="10" y="38" font-family="'Space Mono', monospace" font-size="8.5" fill="#aaff00">[✓] PyVista VTK initialized</text>
+    <text x="10" y="54" font-family="'Space Mono', monospace" font-size="8.5" fill="#00f3ff">[✓] 90x90 topological surface mesh</text>
+    <text x="10" y="70" font-family="'Space Mono', monospace" font-size="8.5" fill="#aaff00">[✓] 120 FPS NVENC stream verified</text>
+    <text x="10" y="86" font-family="'Space Mono', monospace" font-size="8.5" fill="#ffb700">→ output/quantum_market_pulse.mp4</text>
+  </g>
+
+  <!-- Google Colab Badge / Button -->
+  <g transform="translate(510, 360)">
+    <rect x="0" y="0" width="250" height="32" rx="4" fill="rgba(255, 183, 0, 0.12)" stroke="#ffb700" stroke-width="1.2" />
+    <circle cx="20" cy="16" r="5" fill="#ffb700" />
+    <text x="35" y="20" font-family="'Space Mono', monospace" font-weight="700" font-size="10" fill="#ffffff">OPEN IN GOOGLE COLAB</text>
+    <text x="225" y="20" font-family="'Space Mono', monospace" font-size="12" fill="#ffb700">↗</text>
+  </g>
+</svg>
