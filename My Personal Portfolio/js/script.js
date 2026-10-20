@@ -274,6 +274,11 @@ try {
     // Triggered strictly upon user action (Click / Tap / Enter)
     function initiateHackingAndEnter() {
         if (preloaderCompleted) return;
+        if (hasInitiatedHacking) {
+            // Second click/press fast-tracks into portfolio
+            finishPreloader();
+            return;
+        }
         hasInitiatedHacking = true;
 
         // 1. Legally Unlock Audio via user gesture & ensure song is playing immediately
@@ -292,17 +297,25 @@ try {
         playSfx('sfxHover', 0.5);
 
         // Smoothly fade out switch assembly after mechanical bottom-out
-        if (enterBtnWrapper) {
-            enterBtnWrapper.classList.remove('visible');
-            enterBtnWrapper.classList.add('fade-out');
-        }
-        if (enterBtn) {
-            enterBtn.classList.remove('visible');
-            enterBtn.classList.add('fade-out');
+        setTimeout(() => {
+            if (enterBtnWrapper) {
+                enterBtnWrapper.classList.remove('visible');
+                enterBtnWrapper.classList.add('fade-out');
+            }
+            if (enterBtn) {
+                enterBtn.classList.remove('visible');
+                enterBtn.classList.add('fade-out');
+            }
+        }, 160);
+
+        // Update BIOS subtitle to indicate booting has started
+        const biosBrandSub = document.getElementById('biosBrandSub');
+        if (biosBrandSub) {
+            biosBrandSub.textContent = 'AUTHORIZING • BOOTING KALI LINUX...';
         }
 
-        // 3. Fast-track Hollywood Dolly Zoom into portfolio!
-        finishPreloader();
+        // 3. Run authentic BIOS splash & Kali Linux terminal boot sequence on the laptop screen
+        runKaliTerminalSequence();
     }
 
     // User interaction listeners: Button, Screen Tap, or Enter/Space Key
@@ -510,7 +523,7 @@ try {
             if (rgbSurge) rgbSurge.classList.add('ignited');
         }, 260);
 
-        // 3. Power on laptop screen CRT, Flash & wake immediately on docking
+        // 3. Ensure laptop screen CRT & viewport is powered on and displaying the standby BIOS screen
         const viewport = document.getElementById('laptopScreenViewport');
         const powerLine = document.getElementById('screenPowerLine');
         const wakeFlash = document.getElementById('screenWakeFlash');
@@ -525,10 +538,22 @@ try {
             viewport.classList.add('is-waking');
         }
 
-        // 4. Run authentic BIOS splash & Kali Linux terminal boot sequence on the laptop screen
-        runKaliTerminalSequence();
+        // Ensure BIOS stage is displayed on standby and Kali window is hidden
+        const biosStage = document.getElementById('biosBootStage');
+        const kaliWindow = document.getElementById('kaliTerminalWindow');
+        const biosLoaderBar = document.getElementById('biosLoaderBar');
+        if (biosStage) {
+            biosStage.style.display = 'flex';
+            biosStage.classList.remove('fade-out');
+        }
+        if (biosLoaderBar) {
+            biosLoaderBar.style.width = '0%';
+        }
+        if (kaliWindow) {
+            kaliWindow.style.display = 'none';
+        }
 
-        // 5. Reveal the 3D Mechanical Enter Keycap Trigger: "CLICK HERE TO ENTER" immediately
+        // 4. Reveal the 3D Mechanical Enter Keycap Trigger: "CLICK HERE TO ENTER" immediately
         setTimeout(() => {
             if (!hasInitiatedHacking) {
                 if (enterBtnWrapper) enterBtnWrapper.classList.add('visible');
