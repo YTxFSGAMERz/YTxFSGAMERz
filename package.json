@@ -1,0 +1,13 @@
+{
+  "name": "ytxfs-gamerz-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Farhan's Personal Portfolio & Profile Repository",
+  "scripts": {
+    "dev": "npm --prefix \"./My Personal Portfolio\" run dev",
+    "build": "npm --prefix \"./My Personal Portfolio\" run build",
+    "preview": "npm --prefix \"./My Personal Portfolio\" run preview",
+    "generate:resume": "npm --prefix \"./My Personal Portfolio\" run generate:resume",
+    "generate:og": "npm --prefix \"./My Personal Portfolio\" run generate:og"
+  }
+}
