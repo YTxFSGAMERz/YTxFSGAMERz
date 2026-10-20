@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="penmunshiBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0c10" />
+      <stop offset="100%" stop-color="#040507" />
+    </linearGradient>
+    <linearGradient id="neonGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#aaff00" />
+      <stop offset="100%" stop-color="#00ff66" />
+    </linearGradient>
+    <linearGradient id="neonCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f3ff" />
+      <stop offset="100%" stop-color="#0077ff" />
+    </linearGradient>
+    <linearGradient id="neonAmber" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffb700" />
+      <stop offset="100%" stop-color="#ff5500" />
+    </linearGradient>
+    <pattern id="dotGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="rgba(170, 255, 0, 0.08)" />
+    </pattern>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="450" fill="url(#penmunshiBg)" />
+  <rect width="800" height="450" fill="url(#dotGrid)" />
+
+  <!-- Top Tactical HUD Banner -->
+  <rect x="25" y="20" width="750" height="35" fill="rgba(170, 255, 0, 0.05)" stroke="rgba(170, 255, 0, 0.28)" stroke-width="1" />
+  <circle cx="45" cy="37" r="4" fill="#aaff00" />
+  <text x="60" y="42" font-family="'Space Mono', monospace" font-size="12" fill="#aaff00" letter-spacing="2">PENMUNSHI // OFFLINE VAPT REPORT COPILOT</text>
+  <text x="590" y="42" font-family="'Space Mono', monospace" font-size="11" fill="#00f3ff">OLLAMA GEMMA 4 // 100% LOCAL</text>
+
+  <!-- Left Column: Verification Architecture & OCR Redaction Mockup -->
+  <rect x="25" y="68" width="370" height="355" fill="rgba(10, 14, 20, 0.85)" stroke="rgba(170, 255, 0, 0.22)" stroke-width="1" />
+  
+  <rect x="25" y="68" width="370" height="26" fill="rgba(170, 255, 0, 0.08)" />
+  <text x="40" y="85" font-family="'Space Mono', monospace" font-size="11" fill="#aaff00">DETERMINISTIC FACT VERIFIER &amp; OCR REDACTION</text>
+
+  <!-- Terminal Evidence Box -->
+  <g transform="translate(40, 105)">
+    <rect x="0" y="0" width="340" height="70" rx="3" fill="rgba(0, 0, 0, 0.6)" stroke="rgba(255, 255, 255, 0.1)" />
+    <text x="12" y="20" font-family="'Space Mono', monospace" font-size="10" fill="#8892b0">$ penmunshi analyze --backend ollama</text>
+    <text x="12" y="38" font-family="'Space Mono', monospace" font-size="10" fill="#aaff00">[✓] RapidOCR: 4 secrets detected in screenshot</text>
+    <!-- Redaction box simulation -->
+    <rect x="12" y="46" width="130" height="15" fill="#000000" stroke="#aaff00" stroke-width="1" />
+    <text x="18" y="57" font-family="'Space Mono', monospace" font-size="9" fill="#aaff00">[OPAQUE MASK APPLIED]</text>
+    <rect x="150" y="46" width="115" height="15" fill="#000000" stroke="#00f3ff" stroke-width="1" />
+    <text x="156" y="57" font-family="'Space Mono', monospace" font-size="9" fill="#00f3ff">[RE-OCR VERIFIED]</text>
+  </g>
+
+  <!-- Code-Owned CVSS Math vs Prompt Guessing -->
+  <g transform="translate(40, 190)">
+    <rect x="0" y="0" width="340" height="65" rx="3" fill="rgba(0, 243, 255, 0.04)" stroke="rgba(0, 243, 255, 0.25)" />
+    <text x="12" y="20" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="12" fill="#ffffff">CVSS v3.1 Code-Calculated Math</text>
+    <text x="12" y="38" font-family="'Space Mono', monospace" font-size="10" fill="#00f3ff">AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H</text>
+    <text x="12" y="54" font-family="'Space Mono', monospace" font-size="9" fill="#aaff00">Base Score: 9.8 Critical • Strict Code Formulation</text>
+  </g>
+
+  <!-- Scanner Integrations & Retest Diff -->
+  <g transform="translate(40, 270)">
+    <rect x="0" y="0" width="105" height="24" rx="3" fill="rgba(170, 255, 0, 0.12)" stroke="rgba(170, 255, 0, 0.4)" />
+    <text x="52" y="16" font-family="'Space Mono', monospace" font-size="9.5" fill="#aaff00" text-anchor="middle">NMAP XML</text>
+
+    <rect x="115" y="0" width="105" height="24" rx="3" fill="rgba(255, 183, 0, 0.12)" stroke="rgba(255, 183, 0, 0.4)" />
+    <text x="167" y="16" font-family="'Space Mono', monospace" font-size="9.5" fill="#ffb700" text-anchor="middle">BURP XML</text>
+
+    <rect x="230" y="0" width="110" height="24" rx="3" fill="rgba(0, 243, 255, 0.12)" stroke="rgba(0, 243, 255, 0.4)" />
+    <text x="285" y="16" font-family="'Space Mono', monospace" font-size="9.5" fill="#00f3ff" text-anchor="middle">RETEST DIFF</text>
+  </g>
+
+  <text x="40" y="325" font-family="'Space Mono', monospace" font-size="10" fill="#8892b0">Retest Comparison: <tspan fill="#aaff00">RESOLVED</tspan> • <tspan fill="#ff5555">OPEN</tspan> • <tspan fill="#ffb700">REGRESSED</tspan></text>
+  <text x="40" y="348" font-family="'Space Mono', monospace" font-size="10" fill="#8892b0">Exports: <tspan fill="#ffffff">Agency DOCX (XML TOC) • Clean HTML Print CSS</tspan></text>
+  <text x="40" y="375" font-family="'Space Mono', monospace" font-size="10" fill="#aaff00">► DATA SOVEREIGNTY: ZERO PACKETS LEAVE DEVICE</text>
+  <rect x="40" y="395" width="340" height="3" fill="url(#neonGreen)" />
+
+  <!-- Right Column: Empirical Benchmark Telemetry -->
+  <rect x="405" y="68" width="370" height="355" fill="rgba(8, 11, 16, 0.9)" stroke="rgba(0, 243, 255, 0.25)" stroke-width="1" />
+  
+  <rect x="405" y="68" width="370" height="26" fill="rgba(0, 243, 255, 0.08)" />
+  <circle cx="420" cy="81" r="3.5" fill="#00f3ff" />
+  <text x="435" y="85" font-family="'Space Mono', monospace" font-size="11" fill="#00f3ff">EMPIRICAL BENCHMARK // RTX 3050 + GEMMA 4</text>
+
+  <!-- Benchmark KPI Grid -->
+  <g transform="translate(425, 110)">
+    <!-- KPI 1 -->
+    <rect x="0" y="0" width="160" height="60" rx="3" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(170, 255, 0, 0.3)" />
+    <text x="12" y="24" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="22" fill="#aaff00">100%</text>
+    <text x="12" y="44" font-family="'Space Mono', monospace" font-size="9" fill="#8892b0">SECRET RECALL (ZERO LEAKS)</text>
+
+    <!-- KPI 2 -->
+    <rect x="170" y="0" width="160" height="60" rx="3" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(0, 243, 255, 0.3)" />
+    <text x="182" y="24" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="22" fill="#00f3ff">0 (ZERO)</text>
+    <text x="182" y="44" font-family="'Space Mono', monospace" font-size="9" fill="#8892b0">CVE IDENTIFIERS HALLUCINATED</text>
+  </g>
+
+  <g transform="translate(425, 180)">
+    <!-- KPI 3 -->
+    <rect x="0" y="0" width="160" height="60" rx="3" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(170, 255, 0, 0.3)" />
+    <text x="12" y="24" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="22" fill="#aaff00">98%</text>
+    <text x="12" y="44" font-family="'Space Mono', monospace" font-size="9" fill="#8892b0">GROUNDED EVIDENCE QUOTES</text>
+
+    <!-- KPI 4 -->
+    <rect x="170" y="0" width="160" height="60" rx="3" fill="rgba(255, 255, 255, 0.02)" stroke="rgba(255, 183, 0, 0.3)" />
+    <text x="182" y="24" font-family="'Space Grotesk', sans-serif" font-weight="900" font-size="22" fill="#ffb700">91%</text>
+    <text x="182" y="44" font-family="'Space Mono', monospace" font-size="9" fill="#8892b0">READY WITHOUT MANUAL FIX</text>
+  </g>
+
+  <!-- Live Finding Preview Box -->
+  <g transform="translate(425, 255)">
+    <rect x="0" y="0" width="330" height="85" rx="3" fill="rgba(0, 0, 0, 0.7)" stroke="rgba(255, 255, 255, 0.12)" />
+    <text x="12" y="20" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="12" fill="#ffffff">SQL Injection in /api/v1/auth/login</text>
+    <text x="12" y="38" font-family="'Space Mono', monospace" font-size="9.5" fill="#aaff00">CWE-89 • CVSS 8.8 (High) • Remediation Code Attached</text>
+    <text x="12" y="54" font-family="'Space Mono', monospace" font-size="9" fill="#8892b0">Evidence quote: "syntax error near unexpected token..."</text>
+    <text x="12" y="70" font-family="'Space Mono', monospace" font-size="9" fill="#00f3ff">[✓ Verified against tool_output.txt]</text>
+  </g>
+
+  <text x="425" y="365" font-family="'Space Mono', monospace" font-size="10" fill="#aaff00">HARDWARE TARGET: AMD Ryzen 5 + NVIDIA RTX 3050 (6GB)</text>
+  <text x="425" y="388" font-family="'Space Mono', monospace" font-size="10" fill="#8892b0">Ollama Model: gemma4:e4b (7.5B Q4_K_M, Apache-2.0)</text>
+  <rect x="425" y="402" width="330" height="3" fill="url(#neonCyan)" />
+</svg>
