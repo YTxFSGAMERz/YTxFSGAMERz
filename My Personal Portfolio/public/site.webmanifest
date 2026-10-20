@@ -1,0 +1,21 @@
+{
+  "name": "Farhan Shaikh — AI & Cybersecurity Developer Portfolio",
+  "short_name": "Farhan Portfolio",
+  "description": "Official developer portfolio of Farhan Shaikh (Farhan). NASA Space Apps 2026 Global Finalist, SIH 2026 Team Lead, AI & Cybersecurity Systems Architect.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#08090b",
+  "theme_color": "#08090b",
+  "icons": [
+    {
+      "src": "/images/farhan-symbol.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/farhan-symbol.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
