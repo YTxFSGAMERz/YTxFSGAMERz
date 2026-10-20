@@ -4,27 +4,100 @@ import useScrollAnimation from '../hooks/useScrollAnimation';
 
 const projects = [
     {
-        title: "AI Universe Simulation",
-        category: "Generative AI",
-        image: "var(--project-card-1)",
+        title: "Mars-GeoSpectra — Planetary EVA Workstation",
+        category: "NASA Space Apps '26",
+        image: "linear-gradient(135deg, rgba(255,102,0,0.18) 0%, rgba(10,14,20,0.95) 100%)",
+        color: "#ff6600",
+        status: "NASA 2026",
+        link: "https://github.com/YTxFSGAMERz/Mars-GeoSpectra"
+    },
+    {
+        title: "KisanSetu-AI — Agricultural Procurement Platform",
+        category: "SIH '26 Team Lead",
+        image: "linear-gradient(135deg, rgba(0,255,153,0.18) 0%, rgba(10,14,20,0.95) 100%)",
+        color: "#00ff99",
+        status: "SIH Lead",
+        link: "https://frontend-seven-sooty-62.vercel.app"
+    },
+    {
+        title: "PenMunshi — Offline VAPT Copilot",
+        category: "Offensive AI & Security",
+        image: "linear-gradient(135deg, rgba(170,255,0,0.15) 0%, rgba(10,14,20,0.95) 100%)",
+        color: "#aaff00",
+        status: "Local VAPT",
+        link: "https://github.com/YTxFSGAMERz/penmunshi"
+    },
+    {
+        title: "Event Intelligence Agent — Autonomous Scout",
+        category: "Autonomous Systems",
+        image: "linear-gradient(135deg, rgba(0,243,255,0.15) 0%, rgba(10,14,20,0.95) 100%)",
         color: "#00f3ff",
-        status: "Beta"
+        status: "Live Agent",
+        link: "https://event-intelligence-dashboard-indol.vercel.app"
     },
     {
-        title: "Quantum Neural Dashboard",
-        category: "Data Visualization",
-        image: "var(--project-card-2)",
-        color: "#a200ff",
-        status: "Coming Soon"
-    },
-    {
-        title: "Vigilant Sphere GeoSpectra Argus Eye",
-        category: "Geospatial Intelligence HUD",
-        image: "var(--project-card-3)",
-        hoverImage: "/assets/projects/project-3-hover.jpg",
+        title: "GeoVigilant Argus Eye — 3D Planetary OSINT",
+        category: "3D Geospatial HUD",
+        image: "linear-gradient(135deg, rgba(255,51,102,0.15) 0%, rgba(10,14,20,0.95) 100%)",
         color: "#ff3366",
-        status: "Live",
-        link: "https://vigilant-sphere-geospectra-argus-eye.netlify.app/"
+        status: "Live WebGL",
+        link: "https://geovigilant-argus.vercel.app"
+    },
+    {
+        title: "SecuScan — Multi-Tool Security Workspace",
+        category: "Cybersecurity & VAPT",
+        image: "linear-gradient(135deg, rgba(162,0,255,0.15) 0%, rgba(10,14,20,0.95) 100%)",
+        color: "#a200ff",
+        status: "Live Platform",
+        link: "https://secuscan.in"
+    },
+    {
+        title: "EnterpriseRAG-AI — eBPF Knowledge Mesh",
+        category: "Enterprise AI Governance",
+        image: "linear-gradient(135deg, rgba(46,196,182,0.15) 0%, rgba(10,14,20,0.95) 100%)",
+        color: "#2ec4b6",
+        status: "Live Mesh",
+        link: "https://enterpriserag-ai.vercel.app"
+    },
+    {
+        title: "ScamShield — Multimodal AI Fraud Defense",
+        category: "Neural Fraud Detection",
+        image: "linear-gradient(135deg, rgba(255,159,28,0.15) 0%, rgba(10,14,20,0.95) 100%)",
+        color: "#ff9f1c",
+        status: "Live AI",
+        link: "https://scamshield-sandy.vercel.app"
+    },
+    {
+        title: "WinAurex — Windows 10/11 Suite (12★)",
+        category: "Kernel Systems & DISM",
+        image: "linear-gradient(135deg, rgba(0,180,216,0.15) 0%, rgba(10,14,20,0.95) 100%)",
+        color: "#00b4d8",
+        status: "12★ Stars",
+        link: "https://winaurex.vercel.app"
+    },
+    {
+        title: "bdstorage — Rust CAS Deduplication Engine",
+        category: "Systems & Storage",
+        image: "linear-gradient(135deg, rgba(255,107,107,0.15) 0%, rgba(10,14,20,0.95) 100%)",
+        color: "#ff6b6b",
+        status: "Crates.io",
+        link: "https://crates.io/crates/bdstorage"
+    },
+    {
+        title: "Quantum Market Pulse — 4D Alpha Engine",
+        category: "Quantitative Systems & 3D",
+        image: "linear-gradient(135deg, rgba(0,255,102,0.15) 0%, rgba(10,14,20,0.95) 100%)",
+        color: "#00ff66",
+        status: "120 FPS NVENC",
+        link: "https://colab.research.google.com/github/YTxFSGAMERz/Quantum-Market-Pulse-4D-Alpha-Engine/blob/main/Colab.ipynb"
+    },
+    {
+        title: "Random Walk Hypothesis — Bitcoin Econometrics",
+        category: "Quantitative Finance",
+        image: "linear-gradient(135deg, rgba(255,214,10,0.15) 0%, rgba(10,14,20,0.95) 100%)",
+        color: "#ffd60a",
+        status: "Live Model",
+        link: "https://ytxfsgamerz.github.io/Random-Walk-Hypothesis/"
     }
 ];
 
