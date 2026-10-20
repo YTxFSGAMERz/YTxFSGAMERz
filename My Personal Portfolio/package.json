@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate:resume": "node scripts/generate_resume_pdf.js",
+    "generate:og": "node scripts/generate_og_preview.js"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.7",
