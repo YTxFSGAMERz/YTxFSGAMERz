@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="currentColor">
+  <!-- Google Gemma Multimodal Neural Aperture -->
+  <g transform="translate(50,50)">
+    <circle r="44" fill="none" stroke="currentColor" stroke-width="4" stroke-dasharray="14 6" />
+    <polygon points="0,-36 36,0 0,36 -36,0" fill="currentColor" />
+    <circle r="12" fill="#000000" />
+    <circle r="5" fill="#aaff00" />
+    <line x1="-48" y1="0" x2="-38" y2="0" stroke="currentColor" stroke-width="5" />
+    <line x1="38" y1="0" x2="48" y2="0" stroke="currentColor" stroke-width="5" />
+    <line x1="0" y1="-48" x2="0" y2="-38" stroke="currentColor" stroke-width="5" />
+    <line x1="0" y1="38" x2="0" y2="48" stroke="currentColor" stroke-width="5" />
+  </g>
+</svg>
