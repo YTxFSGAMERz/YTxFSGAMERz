@@ -1,0 +1,486 @@
+{
+  "profile": {
+    "name": "Farhan Shaikh",
+    "handle": "YTxFSGAMERz",
+    "title": "Computer Science Engineer & Developer",
+    "subtitle": "⚡ COMPUTER SCIENCE ENGINEER & DEVELOPER",
+    "tagline": "SYSTEM ONLINE // 64+ PUBLIC REPOS // CRATES.IO: BDSTORAGE // OPEN FOR ROLES",
+    "location": "India, IN",
+    "email": "contact@farhan.dev",
+    "github": "https://github.com/YTxFSGAMERz",
+    "linkedin": "https://www.linkedin.com/in/farhan-shaikh-fs",
+    "discord": "https://discord.com/users/1354206425068343419",
+    "twitter": "https://x.com/YTxFSGAMERz",
+    "stats": {
+      "repos": "64+",
+      "modules": "08",
+      "published": "Crates.io"
+    },
+    "resume": "Farhan_Shaikh_Resume.pdf",
+    "cv": "Farhan_Shaikh_Resume.pdf",
+    "resumeUrl": "Farhan_Shaikh_Resume.pdf",
+    "resumeOriginal": "Farhan Shaikh - Resume .pdf",
+    "resumeDownload": "Farhan_Shaikh_Resume.pdf"
+  },
+  "certifications": [
+    {
+      "id": "cert-1",
+      "date": "OCT 2026",
+      "issuer": "NASA EARTH SCIENCE &amp; PLANETARY EXPLORATION",
+      "badge": "NASA GLOBAL FINALIST",
+      "badgeColor": "cyan",
+      "title": "NASA Space Apps Challenge 2026",
+      "role": "Planetary Mission Architect &amp; 3D Workstation Lead",
+      "description": "Architected Mars-GeoSpectra Martian exploration workstation leveraging 6 NASA planetary datasets (MOLA altimetry, CRISM hyperspectral minerals, HiRISE 0.25m/px, CTX, THEMIS, and Perseverance MEDA telemetry) with A* terrain routing adapted to 0.38g gravity.",
+      "skills": [
+        "NASA PDS Datasets",
+        "3D WebGL",
+        "A* Kinematics",
+        "Orbital Telemetry"
+      ],
+      "credentialId": "NASA-SAC-2026-JEZERO-EVA",
+      "verifyUrl": "https://www.spaceappschallenge.org/"
+    },
+    {
+      "id": "cert-2",
+      "date": "2026",
+      "issuer": "MINISTRY OF EDUCATION &amp; AICTE, GOVT. OF INDIA",
+      "badge": "NATIONAL TEAM LEAD",
+      "badgeColor": "green",
+      "title": "Smart India Hackathon (SIH 2026)",
+      "role": "Selected Team Lead &amp; Principal Systems Architect",
+      "description": "Selected Team Lead &amp; Principal Architect for KisanSetu-AI national procurement network. Designed 3-layer AI slot ranking engine, real-time WebSocket queue state machine, and asynchronous ORM pipelines across 11 relational schemas.",
+      "skills": [
+        "Next.js 15",
+        "FastAPI",
+        "WebSockets",
+        "Distributed Architecture"
+      ],
+      "credentialId": "SIH-2026-NAT-LEAD-0842",
+      "verifyUrl": "https://www.sih.gov.in/"
+    },
+    {
+      "id": "cert-3",
+      "date": "2026",
+      "issuer": "RUST FOUNDATION &amp; CRATES.IO REGISTRY",
+      "badge": "PUBLISHED AUTHOR",
+      "badgeColor": "solar",
+      "title": "Crates.io Published Package Author",
+      "role": "Lead Systems Developer &amp; Package Maintainer",
+      "description": "Engineered and published 'bdstorage' — a memory-safe, ultra-high-throughput Content-Addressable Storage (CAS) engine in Rust featuring BLAKE3 hashing, zero-copy memory-mapped I/O, and chunk-level deduplication.",
+      "skills": [
+        "Rust 2024",
+        "SHA-256 / BLAKE3 CAS",
+        "Zero-Copy Memory",
+        "Tokio Async"
+      ],
+      "credentialId": "CRATES-IO-BDSTORAGE-VERIFIED",
+      "verifyUrl": "https://crates.io/crates/bdstorage"
+    },
+    {
+      "id": "cert-4",
+      "date": "2026",
+      "issuer": "CYBERSECURITY &amp; VAPT STANDARDS",
+      "badge": "SECURITY SPECIALIST",
+      "badgeColor": "crimson",
+      "title": "Offensive Security &amp; VAPT Practitioner",
+      "role": "Local Security Workspace &amp; eBPF Mesh Architect",
+      "description": "Architected SecuScan local security workspace integrating 60 offensive security tools and EnterpriseRAG eBPF Linux kernel tracing mesh for zero-leak AI workloads, kernel syscall intercept (kprobe/tracepoint), and memory fencing.",
+      "skills": [
+        "Linux eBPF",
+        "Burp Suite",
+        "Nmap / Nuclei",
+        "OWASP Top 10"
+      ],
+      "credentialId": "SEC-VAPT-LOCAL-60TOOLS-PASS",
+      "verifyUrl": "https://secuscan.in"
+    },
+    {
+      "id": "cert-5",
+      "date": "2026",
+      "issuer": "DEEPLEARNING.AI / GOOGLE ECOSYSTEM",
+      "badge": "AI SYSTEMS ARCHITECT",
+      "badgeColor": "cyan",
+      "title": "Full-Stack Multimodal AI Specialist",
+      "role": "Multimodal Vision-Language &amp; Agent Systems Engineer",
+      "description": "Engineered ScamShield multimodal defense engine with Gemma 4 Vision and vernacular NLP, processing real-time fraud visual cues and multilingual text streams, and PenMunshi zero-leak local VAPT copilot with Ollama.",
+      "skills": [
+        "Gemma 4 Vision",
+        "Ollama Local",
+        "PyTorch",
+        "Multilingual NLP"
+      ],
+      "credentialId": "AI-GEMMA4-RAG-SYS-2026",
+      "verifyUrl": "https://scamshield-sandy.vercel.app"
+    },
+    {
+      "id": "cert-6",
+      "date": "OCT 2026",
+      "issuer": "DIGITALOCEAN, GITHUB &amp; OPEN SOURCE INITIATIVE",
+      "badge": "OPEN-SOURCE CHAMPION",
+      "badgeColor": "green",
+      "title": "Hacktoberfest 2026 Super Contributor",
+      "role": "Open Source Maintainer &amp; Contributor",
+      "description": "Active open-source contributor across security, systems, and AI repositories with over 64 public repositories on GitHub maintained at github.com/YTxFSGAMERz, leading multi-repo code reviews and CI/CD pipelines.",
+      "skills": [
+        "Git / GitHub Actions",
+        "CI/CD Pipelines",
+        "Code Review",
+        "64+ Repositories"
+      ],
+      "credentialId": "HFEST-2026-64REPOS-OPEN",
+      "verifyUrl": "https://github.com/YTxFSGAMERz"
+    }
+  ],
+  "projects": [
+    {
+      "id": "penmunshi",
+      "number": "01",
+      "badge": "OFFLINE AI // OLLAMA GEMMA 4 // VAPT",
+      "category": "ai cyber",
+      "image": "images/project_penmunshi.svg",
+      "title": "PenMunshi — Offline VAPT Report Copilot",
+      "subtitle": "Offline VAPT Report Copilot",
+      "description": "Offline-first pentest and VAPT report copilot powered by local Google Gemma 4 on Ollama with deterministic fact verification. Features sub-span RapidOCR opaque secret blackout with re-OCR verification loops, code-calculated CVSS v3.1 scores (0 hallucinations), Nmap/Burp scanner importers, and agency-grade DOCX/HTML exports with complete data sovereignty.",
+      "techStack": [
+        "Python 3.11+",
+        "Google Gemma 4",
+        "Ollama (Local)",
+        "RapidOCR",
+        "CVSS v3.1",
+        "Nmap &amp; Burp XML"
+      ],
+      "specTag": "100% DATA SOVEREIGNTY",
+      "inspectId": "penmunshi",
+      "githubUrl": "https://github.com/YTxFSGAMERz/penmunshi",
+      "liveUrl": ""
+    },
+    {
+      "id": "eventintel",
+      "number": "02",
+      "badge": "AUTONOMOUS AGENT // TELEGRAM INTELLIGENCE",
+      "category": "ai systems",
+      "image": "images/project_eventintel.svg",
+      "title": "Event Intelligence Agent — Autonomous Scout",
+      "subtitle": "Autonomous Scout",
+      "description": "Autonomous event intelligence agent that discovers hackathons, competitions, fellowships, scholarships, internships, and fully funded travel opportunities. Features official-page verification, noise triage heuristic, scheduled GitHub Actions runners, real-time Telegram bot alerts, and a searchable live web dashboard tracking $2.4M+ in prize pools.",
+      "techStack": [
+        "Python",
+        "GitHub Actions",
+        "Telegram Bot API",
+        "RSS/Atom",
+        "Deterministic Triage"
+      ],
+      "specTag": "24/7 AUTONOMOUS RECON",
+      "inspectId": "eventintel",
+      "githubUrl": "https://github.com/YTxFSGAMERz/event-intelligence-agent",
+      "liveUrl": ""
+    },
+    {
+      "id": "geovigilant",
+      "number": "03",
+      "badge": "GEOSPATIAL INTEL // THREE.JS &amp; WEBGL",
+      "category": "webgl cyber",
+      "image": "images/project_geovigilant.png",
+      "title": "GeoVigilant Argus — 3D Planetary OSINT",
+      "subtitle": "3D Planetary OSINT",
+      "description": "Tactical multi-domain geospatial intelligence platform visualizing live ADS-B flight vectors, maritime AIS tracks, satellite orbits, seismic telemetry, and 88K+ landmark visual/vector search on an interactive 3D WebGL HUD.",
+      "techStack": [
+        "Three.js",
+        "WebGL",
+        "Python / Flask",
+        "ADS-B &amp; AIS Feeds",
+        "OSINT"
+      ],
+      "specTag": "LIVE DEPLOYED // THREE.JS",
+      "inspectId": "geovigilant",
+      "githubUrl": "https://github.com/YTxFSGAMERz/GeoVigilant-Argus",
+      "liveUrl": "https://geovigilant-argus.vercel.app"
+    },
+    {
+      "id": "quantum",
+      "number": "04",
+      "badge": "GPU VTK // 120 FPS COMPOSITOR // 4D ALPHA",
+      "category": "systems webgl ai",
+      "image": "images/project_quantum.svg",
+      "title": "Quantum Market Pulse — 4D Alpha Engine",
+      "subtitle": "4D Alpha Engine",
+      "description": "High-performance quantitative animation and market intelligence engine rendering 3,400+ trading days (BTC, ETH, SPY, Gold) as a dynamic 4D energy topology. Features a PyVista GPU (VTK) + Matplotlib CPU hybrid compositor running at 120 FPS, mathematical Gaussian wave smoothing, and directional α momentum color mapping.",
+      "techStack": [
+        "PyVista (GPU VTK)",
+        "Python 3.11",
+        "120 FPS Compositor",
+        "SciPy Gaussian Zoom",
+        "Google Colab",
+        "Quant Finance"
+      ],
+      "specTag": "120 FPS // 4D TOPOLOGY",
+      "inspectId": "quantum",
+      "githubUrl": "https://github.com/YTxFSGAMERz/Quantum-Market-Pulse-4D-Alpha-Engine",
+      "liveUrl": ""
+    },
+    {
+      "id": "secuscan",
+      "number": "05",
+      "badge": "LOCAL-FIRST // FASTAPI &amp; REACT // 60 TOOLS",
+      "category": "cyber systems",
+      "image": "images/project_secuscan.svg",
+      "title": "SecuScan — Local Security Workspace",
+      "subtitle": "Local Security Workspace",
+      "description": "Local-first vulnerability assessment workspace providing standardized execution controls, normalized findings, and 60 catalogued offensive tool integrations (Nmap, Nikto, Nuclei, Sqlmap, Masscan, SSLyze) without cloud telemetry leaks.",
+      "techStack": [
+        "FastAPI",
+        "React 19",
+        "TypeScript",
+        "Offensive Security",
+        "Nmap &amp; Nuclei",
+        "CVE Database"
+      ],
+      "specTag": "60 CATALOGUED SCANNERS",
+      "inspectId": "secuscan",
+      "githubUrl": "https://github.com/YTxFSGAMERz/SecuScan",
+      "liveUrl": "https://secuscan.in"
+    },
+    {
+      "id": "enterpriserag",
+      "number": "06",
+      "badge": "LINUX eBPF KERNEL // AI GOVERNANCE MESH",
+      "category": "ai cyber systems",
+      "image": "images/project_enterpriserag.svg",
+      "title": "EnterpriseRAG-AI — Linux eBPF Security Mesh",
+      "subtitle": "Linux eBPF Security Mesh",
+      "description": "Linux-native, eBPF-powered security and governance mesh for autonomous AI agent workloads. Features kernel-level syscall tracing (kprobe/tracepoint), secret leak redaction, dynamic memory fencing, and vector retrieval validation before LLM inference.",
+      "techStack": [
+        "Linux eBPF",
+        "Python",
+        "kprobe / tracepoint",
+        "Ollama / Gemma",
+        "AI Governance",
+        "Vector Retrieval"
+      ],
+      "specTag": "eBPF KERNEL HOOKS",
+      "inspectId": "enterpriserag",
+      "githubUrl": "https://github.com/YTxFSGAMERz/EnterpriseRAG-AI",
+      "liveUrl": "https://enterpriserag-ai.vercel.app"
+    },
+    {
+      "id": "scamshield",
+      "number": "07",
+      "badge": "MULTIMODAL AI // GEMMA 4 VISION &amp; NLP",
+      "category": "ai cyber",
+      "image": "images/project_scamshield.png",
+      "title": "ScamShield — AI Cyber Defense Engine",
+      "subtitle": "AI Cyber Defense Engine",
+      "description": "AI-powered multimodal fraud defense platform engineered with Gemma 4 vision and NLP. Features real-time screenshot threat scanning, URL phishing detection, caller risk intelligence, automated victim recovery workflows, and multi-language support (English, Hindi, Gujarati).",
+      "techStack": [
+        "Python",
+        "Gemma 4 Vision",
+        "Threat Intel",
+        "NLP",
+        "Cybersecurity"
+      ],
+      "specTag": "HACKTOBERFEST 2026",
+      "inspectId": "scamshield",
+      "githubUrl": "https://github.com/YTxFSGAMERz/ScamShield",
+      "liveUrl": "https://scamshield-sandy.vercel.app"
+    },
+    {
+      "id": "winaurex",
+      "number": "08",
+      "badge": "SYSTEMS ENGINEERING // 8★ GITHUB",
+      "category": "systems",
+      "image": "images/project_winaurex_banner.png",
+      "title": "WinAurex — Windows Engineering Suite",
+      "subtitle": "Windows Engineering Suite",
+      "description": "Modular Windows engineering framework optimizing Windows 10/11 for peak responsiveness, gaming, and privacy. Automated debloating, unattended bypass configurations (TPM/RAM/SecureBoot), telemetry removal, and driver management.",
+      "techStack": [
+        "PowerShell 7+",
+        "Batchfile",
+        "C# / WPF",
+        "Kernel Tweaks",
+        "DISM"
+      ],
+      "specTag": "8★ STARS // ZERO BLOAT",
+      "inspectId": "winaurex",
+      "githubUrl": "https://github.com/YTxFSGAMERz/WinAurex",
+      "liveUrl": ""
+    },
+    {
+      "id": "randomwalk",
+      "number": "09",
+      "badge": "QUANT FINANCE // TIME-SERIES",
+      "category": "systems",
+      "image": "images/project_randomwalk.png",
+      "title": "Random Walk Hypothesis — BTC Quant Engine",
+      "subtitle": "BTC Quant Engine",
+      "description": "Statistical econometrics framework testing market efficiency on cryptocurrency price series. Features Augmented Dickey-Fuller (ADF) tests, Lo-MacKinlay Variance Ratio testing, Autocorrelation, Runs testing, and GARCH(1,1) volatility modeling.",
+      "techStack": [
+        "Python",
+        "statsmodels",
+        "arch (GARCH)",
+        "Econometrics",
+        "Pandas"
+      ],
+      "specTag": "13-YR BITCOIN STUDY",
+      "inspectId": "randomwalk",
+      "githubUrl": "https://github.com/YTxFSGAMERz/Random-Walk-Hypothesis",
+      "liveUrl": ""
+    },
+    {
+      "id": "bdstorage",
+      "number": "10",
+      "badge": "RUST // CRATES.IO // CAS DEDUP",
+      "category": "systems",
+      "image": "images/rust_symbol.svg",
+      "title": "bdstorage — Rust CAS Deduplication Engine",
+      "subtitle": "Rust CAS Deduplication Engine",
+      "description": "High-throughput Content-Addressable Storage (CAS) engine in modern Rust published on Crates.io. Features fast rolling chunk deduplication (FastCDC), BLAKE3 cryptographic hashing, lockless concurrent B-tree indexing, and zero-copy block streaming for multi-gigabyte datasets.",
+      "techStack": [
+        "Rust 2021",
+        "Crates.io",
+        "BLAKE3",
+        "FastCDC",
+        "Zero-Copy",
+        "Systems"
+      ],
+      "specTag": "PUBLISHED CRATE // RUST",
+      "inspectId": "bdstorage",
+      "githubUrl": "https://github.com/YTxFSGAMERz/bdstorage",
+      "liveUrl": ""
+    },
+    {
+      "id": "marsgeospectra",
+      "number": "11",
+      "badge": "NASA SPACE APPS 2026 // 3D MARSWALK WORKSTATION",
+      "category": "ai webgl systems",
+      "image": "images/project_marsgeospectra.png",
+      "title": "Mars-GeoSpectra — NASA Planetary Mission Workstation",
+      "subtitle": "NASA Planetary Mission Workstation",
+      "description": "Planetary mission-planning workstation engineered for future human Marswalk EVAs around Jezero Crater (NASA Perseverance). Synthesizes 6 NASA mission datasets (MOLA altimetry, CRISM hyperspectral minerals, HiRISE 0.25m/px, CTX, THEMIS, and Perseverance MEDA telemetry) with a multi-objective A* terrain routing engine adapting Tobler's hiking kinematics to Mars 0.38g gravity, interactive 3D WebGL simulation HUD, and a Grounded AI Mission Scientist.",
+      "techStack": [
+        "TypeScript",
+        "3D WebGL / GIS",
+        "NASA PDS Datasets",
+        "A* Terrain Routing",
+        "0.38g Kinematics",
+        "Grounded AI"
+      ],
+      "specTag": "NASA SPACE APPS 2026",
+      "inspectId": "marsgeospectra",
+      "githubUrl": "https://github.com/YTxFSGAMERz/Mars-GeoSpectra",
+      "liveUrl": ""
+    },
+    {
+      "id": "kisansetu",
+      "number": "12",
+      "badge": "SIH 2026 LEAD // FULL-STACK AI PLATFORM // WEBSOCKETS",
+      "category": "ai systems",
+      "image": "images/project_kisansetu.png",
+      "title": "KisanSetu-AI — Smart Agriculture Procurement Ecosystem",
+      "subtitle": "Smart Agriculture Procurement Ecosystem",
+      "description": "Full-stack national agricultural procurement and logistics platform engineered for Smart India Hackathon 2026 (Led by Farhan). Features a three-layer AI slot ranking engine minimizing Mandi congestion, live WebSocket queue state machine with digital weighbridge grading, MSP payment calculation, 11 async SQLAlchemy ORM tables, and 3 dedicated role portals (Farmer, Procurement Officer, Gov Admin).",
+      "techStack": [
+        "Next.js 15",
+        "FastAPI (Python 3.13)",
+        "WebSockets",
+        "SQLAlchemy Async",
+        "AI Congestion Engine",
+        "Docker"
+      ],
+      "specTag": "SIH 2026 TEAM LEAD",
+      "inspectId": "kisansetu",
+      "githubUrl": "https://github.com/YTxFSGAMERz/KisanSetu-AI",
+      "liveUrl": ""
+    }
+  ],
+  "skills": [
+    {
+      "id": "kali",
+      "title": "KALI",
+      "badge": "OFFENSIVE // OS",
+      "badgeType": "red",
+      "image": "images/kali_symbol.png",
+      "loadingLabel": "ROOT EXPLOITS // LOADED",
+      "loadingPct": "98.5%",
+      "progressWidth": "98%",
+      "cliCommand": "whoami"
+    },
+    {
+      "id": "gemma",
+      "title": "GEMMA & CLAUDE",
+      "badge": "NEURAL // LOCAL AI",
+      "badgeType": "dark",
+      "image": "images/gemma_symbol.svg",
+      "loadingLabel": "OLLAMA LOCAL // 14MS",
+      "loadingPct": "99.4%",
+      "progressWidth": "99.4%",
+      "cliCommand": "penmunshi"
+    },
+    {
+      "id": "automation",
+      "title": "AUTOMATION",
+      "badge": "PIPELINES // RECON",
+      "badgeType": "dark",
+      "image": "images/automation_symbol.png",
+      "loadingLabel": "AGENTS SYNCED // CRON",
+      "loadingPct": "RUNNING 24/7",
+      "progressWidth": "96%",
+      "cliCommand": "event-intel"
+    },
+    {
+      "id": "nmap",
+      "title": "NMAP & OSINT",
+      "badge": "NETWORK // RECON",
+      "badgeType": "dark",
+      "image": "images/nmap_symbol.png",
+      "loadingLabel": "STEALTH SYN SCAN // PORTS",
+      "loadingPct": "97.8%",
+      "progressWidth": "97%",
+      "cliCommand": "scan"
+    },
+    {
+      "id": "quant",
+      "title": "PYTHON & QUANT",
+      "badge": "DATA // ECONOMETRICS",
+      "badgeType": "dark",
+      "image": "images/python_quant_symbol.svg",
+      "loadingLabel": "GARCH & LO-MACKINLAY // BTC",
+      "loadingPct": "99.2%",
+      "progressWidth": "99.2%",
+      "cliCommand": "rwh"
+    },
+    {
+      "id": "threejs",
+      "title": "THREE.JS & WEBGL",
+      "badge": "GRAPHICS // 3D HUD",
+      "badgeType": "dark",
+      "image": "images/threejs_symbol.svg",
+      "loadingLabel": "ORBITAL HUD // SHADERS",
+      "loadingPct": "60.0 FPS",
+      "progressWidth": "98.7%",
+      "cliCommand": "argus"
+    },
+    {
+      "id": "rust",
+      "title": "RUST & SYSTEMS",
+      "badge": "CRATES.IO // BDSTORAGE",
+      "badgeType": "red",
+      "image": "images/rust_symbol.svg",
+      "loadingLabel": "CAS ENGINE // ZERO-COPY DEDUP",
+      "loadingPct": "CRATES.IO",
+      "progressWidth": "99.8%",
+      "cliCommand": "bdstorage"
+    },
+    {
+      "id": "winaurex",
+      "title": "WINAUREX & DISM",
+      "badge": "8★ GITHUB // KERNEL",
+      "badgeType": "red",
+      "image": "images/project_winaurex.png",
+      "loadingLabel": "TELEMETRY STRIPPED // DISM",
+      "loadingPct": "97.4%",
+      "progressWidth": "97.4%",
+      "cliCommand": "winaurex"
+    }
+  ]
+}
