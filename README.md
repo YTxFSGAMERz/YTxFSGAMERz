@@ -10,7 +10,7 @@
   </p>
 
   <p>
-    <a href="https://ytxfsgamerz.github.io/">
+    <a href="https://my-personal-portfolio-lovat-nine.vercel.app/">
       <img src="https://img.shields.io/badge/🌐_Official_Portfolio-Farhan_Shaikh-00f3ff?style=for-the-badge&logoColor=white&labelColor=08090b" alt="Farhan Shaikh Official Portfolio">
     </a>
     <a href="https://ytxfsgamerz.github.io/">
